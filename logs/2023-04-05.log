@@ -1,0 +1,124 @@
+[INFO]2023-04-05 16:29:51,482 - Starting QRcodebackApplication using Java 1.8.0_301 on DESKTOP-D137OBD with PID 16420 (E:\springboot\QRcodeback\target\classes started by DAGUAISHOU in E:\springboot\QRcodeback)
+[INFO]2023-04-05 16:29:51,483 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-04-05 16:29:51,530 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO]2023-04-05 16:29:51,531 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[WARN]2023-04-05 16:29:52,065 - No MyBatis mapper was found in '[com.code.qrcodeback]' package. Please check your configuration.
+[INFO]2023-04-05 16:29:52,475 - Tomcat initialized with port(s): 8080 (http)
+[INFO]2023-04-05 16:29:52,476 - Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+[INFO]2023-04-05 16:29:52,476 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[INFO]2023-04-05 16:29:52,476 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO]2023-04-05 16:29:52,479 - OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+[INFO]2023-04-05 16:29:52,485 - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO]2023-04-05 16:29:52,485 - Starting service [Tomcat]
+[INFO]2023-04-05 16:29:52,486 - Starting Servlet engine: [Apache Tomcat/9.0.73]
+[INFO]2023-04-05 16:29:52,590 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-04-05 16:29:52,590 - Root WebApplicationContext: initialization completed in 1058 ms
+[INFO]2023-04-05 16:29:53,017 - LiveReload server is running on port 35729
+[INFO]2023-04-05 16:29:53,031 - Starting ProtocolHandler ["http-nio-8080"]
+[WARN]2023-04-05 16:29:53,035 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+[INFO]2023-04-05 16:29:53,039 - Pausing ProtocolHandler ["http-nio-8080"]
+[INFO]2023-04-05 16:29:53,039 - Stopping service [Tomcat]
+[INFO]2023-04-05 16:29:53,042 - Stopping ProtocolHandler ["http-nio-8080"]
+[INFO]2023-04-05 16:29:53,042 - Destroying ProtocolHandler ["http-nio-8080"]
+[ERROR]2023-04-05 16:29:53,081 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+[INFO]2023-04-05 16:30:13,189 - Starting QRcodebackApplication using Java 1.8.0_301 on DESKTOP-D137OBD with PID 24568 (E:\springboot\QRcodeback\target\classes started by DAGUAISHOU in E:\springboot\QRcodeback)
+[INFO]2023-04-05 16:30:13,190 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-04-05 16:30:13,241 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO]2023-04-05 16:30:13,242 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[WARN]2023-04-05 16:30:13,797 - No MyBatis mapper was found in '[com.code.qrcodeback]' package. Please check your configuration.
+[INFO]2023-04-05 16:30:14,203 - Tomcat initialized with port(s): 8888 (http)
+[INFO]2023-04-05 16:30:14,203 - Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+[INFO]2023-04-05 16:30:14,204 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[INFO]2023-04-05 16:30:14,204 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO]2023-04-05 16:30:14,207 - OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+[INFO]2023-04-05 16:30:14,214 - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-05 16:30:14,214 - Starting service [Tomcat]
+[INFO]2023-04-05 16:30:14,214 - Starting Servlet engine: [Apache Tomcat/9.0.73]
+[INFO]2023-04-05 16:30:14,322 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-04-05 16:30:14,322 - Root WebApplicationContext: initialization completed in 1080 ms
+[INFO]2023-04-05 16:30:14,771 - LiveReload server is running on port 35729
+[INFO]2023-04-05 16:30:14,784 - Starting ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-05 16:30:14,799 - Tomcat started on port(s): 8888 (http) with context path ''
+[INFO]2023-04-05 16:30:14,821 - Started QRcodebackApplication in 2.167 seconds (JVM running for 4.066)
+[INFO]2023-04-05 16:30:29,646 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO]2023-04-05 16:30:29,646 - Initializing Servlet 'dispatcherServlet'
+[INFO]2023-04-05 16:30:29,647 - Completed initialization in 1 ms
+[INFO]2023-04-05 16:36:53,853 - Starting QRcodebackApplication using Java 1.8.0_301 on DESKTOP-D137OBD with PID 9600 (E:\springboot\QRcodeback\target\classes started by DAGUAISHOU in E:\springboot\QRcodeback)
+[INFO]2023-04-05 16:36:53,854 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-04-05 16:36:53,906 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO]2023-04-05 16:36:53,906 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[WARN]2023-04-05 16:36:54,547 - No MyBatis mapper was found in '[com.code.qrcodeback]' package. Please check your configuration.
+[INFO]2023-04-05 16:36:54,991 - Tomcat initialized with port(s): 8888 (http)
+[INFO]2023-04-05 16:36:54,992 - Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+[INFO]2023-04-05 16:36:54,992 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[INFO]2023-04-05 16:36:54,992 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO]2023-04-05 16:36:54,996 - OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+[INFO]2023-04-05 16:36:55,003 - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-05 16:36:55,003 - Starting service [Tomcat]
+[INFO]2023-04-05 16:36:55,004 - Starting Servlet engine: [Apache Tomcat/9.0.73]
+[INFO]2023-04-05 16:36:55,115 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-04-05 16:36:55,115 - Root WebApplicationContext: initialization completed in 1208 ms
+[INFO]2023-04-05 16:36:55,595 - LiveReload server is running on port 35729
+[INFO]2023-04-05 16:36:55,610 - Starting ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-05 16:36:55,628 - Tomcat started on port(s): 8888 (http) with context path ''
+[INFO]2023-04-05 16:36:55,652 - Started QRcodebackApplication in 2.38 seconds (JVM running for 4.397)
+[INFO]2023-04-05 16:37:05,623 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO]2023-04-05 16:37:05,623 - Initializing Servlet 'dispatcherServlet'
+[INFO]2023-04-05 16:37:05,624 - Completed initialization in 1 ms
+[INFO]2023-04-05 16:37:27,691 - Starting QRcodebackApplication using Java 1.8.0_301 on DESKTOP-D137OBD with PID 20028 (E:\springboot\QRcodeback\target\classes started by DAGUAISHOU in E:\springboot\QRcodeback)
+[INFO]2023-04-05 16:37:27,692 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-04-05 16:37:27,743 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO]2023-04-05 16:37:27,743 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[WARN]2023-04-05 16:37:28,359 - No MyBatis mapper was found in '[com.code.qrcodeback]' package. Please check your configuration.
+[INFO]2023-04-05 16:37:29,140 - Tomcat initialized with port(s): 8888 (http)
+[INFO]2023-04-05 16:37:29,143 - Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+[INFO]2023-04-05 16:37:29,144 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[INFO]2023-04-05 16:37:29,144 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO]2023-04-05 16:37:29,158 - OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+[INFO]2023-04-05 16:37:29,173 - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-05 16:37:29,174 - Starting service [Tomcat]
+[INFO]2023-04-05 16:37:29,174 - Starting Servlet engine: [Apache Tomcat/9.0.73]
+[INFO]2023-04-05 16:37:29,401 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-04-05 16:37:29,401 - Root WebApplicationContext: initialization completed in 1657 ms
+[INFO]2023-04-05 16:37:30,083 - LiveReload server is running on port 35729
+[INFO]2023-04-05 16:37:30,101 - Starting ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-05 16:37:30,121 - Tomcat started on port(s): 8888 (http) with context path ''
+[INFO]2023-04-05 16:37:30,150 - Started QRcodebackApplication in 3.033 seconds (JVM running for 5.037)
+[INFO]2023-04-05 16:46:49,278 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO]2023-04-05 16:46:49,278 - Initializing Servlet 'dispatcherServlet'
+[INFO]2023-04-05 16:46:49,279 - Completed initialization in 1 ms
+[INFO]2023-04-05 17:06:52,412 - Starting QRcodebackApplication using Java 1.8.0_301 on DESKTOP-D137OBD with PID 26772 (E:\springboot\QRcodeback\target\classes started by DAGUAISHOU in E:\springboot\QRcodeback)
+[INFO]2023-04-05 17:06:52,413 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-04-05 17:06:52,457 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO]2023-04-05 17:06:52,457 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[WARN]2023-04-05 17:06:53,068 - No MyBatis mapper was found in '[com.code.qrcodeback]' package. Please check your configuration.
+[INFO]2023-04-05 17:06:53,501 - Tomcat initialized with port(s): 8888 (http)
+[INFO]2023-04-05 17:06:53,502 - Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+[INFO]2023-04-05 17:06:53,502 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[INFO]2023-04-05 17:06:53,502 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO]2023-04-05 17:06:53,506 - OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+[INFO]2023-04-05 17:06:53,512 - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-05 17:06:53,513 - Starting service [Tomcat]
+[INFO]2023-04-05 17:06:53,513 - Starting Servlet engine: [Apache Tomcat/9.0.73]
+[INFO]2023-04-05 17:06:53,631 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-04-05 17:06:53,631 - Root WebApplicationContext: initialization completed in 1173 ms
+[INFO]2023-04-05 17:06:54,107 - LiveReload server is running on port 35729
+[INFO]2023-04-05 17:06:54,122 - Starting ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-05 17:06:54,139 - Tomcat started on port(s): 8888 (http) with context path ''
+[INFO]2023-04-05 17:06:54,163 - Started QRcodebackApplication in 2.308 seconds (JVM running for 4.56)
+[INFO]2023-04-05 17:07:14,661 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO]2023-04-05 17:07:14,661 - Initializing Servlet 'dispatcherServlet'
+[INFO]2023-04-05 17:07:14,662 - Completed initialization in 1 ms

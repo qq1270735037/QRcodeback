@@ -122,3 +122,25 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 [INFO]2023-04-05 17:07:14,661 - Initializing Spring DispatcherServlet 'dispatcherServlet'
 [INFO]2023-04-05 17:07:14,661 - Initializing Servlet 'dispatcherServlet'
 [INFO]2023-04-05 17:07:14,662 - Completed initialization in 1 ms
+[INFO]2023-04-05 17:43:27,924 - Starting QRcodebackApplication using Java 1.8.0_301 on DESKTOP-D137OBD with PID 25136 (E:\springboot\QRcodeback\target\classes started by DAGUAISHOU in E:\springboot\QRcodeback)
+[INFO]2023-04-05 17:43:27,926 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-04-05 17:43:27,984 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO]2023-04-05 17:43:27,984 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[WARN]2023-04-05 17:43:28,659 - No MyBatis mapper was found in '[com.code.qrcodeback]' package. Please check your configuration.
+[INFO]2023-04-05 17:43:29,191 - Tomcat initialized with port(s): 8888 (http)
+[INFO]2023-04-05 17:43:29,192 - Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+[INFO]2023-04-05 17:43:29,193 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[INFO]2023-04-05 17:43:29,193 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO]2023-04-05 17:43:29,197 - OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+[INFO]2023-04-05 17:43:29,204 - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-05 17:43:29,205 - Starting service [Tomcat]
+[INFO]2023-04-05 17:43:29,205 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+[INFO]2023-04-05 17:43:29,359 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-04-05 17:43:29,359 - Root WebApplicationContext: initialization completed in 1374 ms
+[INFO]2023-04-05 17:43:29,928 - LiveReload server is running on port 35729
+[INFO]2023-04-05 17:43:29,945 - Starting ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-05 17:43:29,964 - Tomcat started on port(s): 8888 (http) with context path ''
+[INFO]2023-04-05 17:43:30,012 - Started QRcodebackApplication in 2.603 seconds (JVM running for 5.365)
+[INFO]2023-04-05 17:43:46,803 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO]2023-04-05 17:43:46,803 - Initializing Servlet 'dispatcherServlet'
+[INFO]2023-04-05 17:43:46,805 - Completed initialization in 2 ms

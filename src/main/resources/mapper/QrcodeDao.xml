@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.code.qrcodeback.dao.QrcodeDao">
+
+    <resultMap id="BaseResultMap" type="com.code.qrcodeback.entity.Qrcode">
+        <!--@Table qrcode-->
+        <result property="codeId" column="code_id" jdbcType="INTEGER"/>
+        <result property="userId" column="user_id" jdbcType="INTEGER"/>
+        <result property="codeImage" column="code_image" jdbcType="VARCHAR"/>
+        <result property="validTime" column="valid_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="BaseResultMap">
+        select
+          code_id, user_id, code_image, valid_time
+        from qrcode
+        where code_id = #{codeId}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="BaseResultMap">
+        select
+          code_id, user_id, code_image, valid_time
+        from qrcode
+        <where>
+            <if test="codeId != null">
+                and code_id = #{codeId}
+            </if>
+            <if test="userId != null">
+                and user_id = #{userId}
+            </if>
+            <if test="codeImage != null">
+                and code_image = #{codeImage}
+            </if>
+            <if test="validTime != null">
+                and valid_time = #{validTime}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="BaseResultMap">
+        select
+          code_id, user_id, code_image, valid_time
+        from access.qrcode
+    </select>
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from qrcode
+        <where>
+            <if test="codeId != null">
+                and code_id = #{codeId}
+            </if>
+            <if test="userId != null">
+                and user_id = #{userId}
+            </if>
+            <if test="codeImage != null">
+                and code_image = #{codeImage}
+            </if>
+            <if test="validTime != null">
+                and valid_time = #{validTime}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="codeId" useGeneratedKeys="true">
+        insert into qrcode(user_id, code_image, valid_time)
+        values (#{userId}, #{codeImage}, #{validTime})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="codeId" useGeneratedKeys="true">
+        insert into qrcode(user_id, code_image, valid_time)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.userId}, #{entity.codeImage}, #{entity.validTime})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="codeId" useGeneratedKeys="true">
+        insert into qrcode(user_id, code_image, valid_time)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.userId}, #{entity.codeImage}, #{entity.validTime})
+        </foreach>
+        on duplicate key update
+        user_id = values(user_id),
+        code_image = values(code_image),
+        valid_time = values(valid_time)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update qrcode
+        <set>
+            <if test="userId != null">
+                user_id = #{userId},
+            </if>
+            <if test="codeImage != null">
+                code_image = #{codeImage},
+            </if>
+            <if test="validTime != null">
+                valid_time = #{validTime},
+            </if>
+        </set>
+        where code_id = #{codeId}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from qrcode where code_id = #{codeId}
+    </delete>
+
+</mapper>
+

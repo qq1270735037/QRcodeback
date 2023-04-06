@@ -13,6 +13,6 @@ public class test {
     @GetMapping("/")
     @ResponseBody
     public String test1(){
-        return "test";
+        return "test1";
     }
 }

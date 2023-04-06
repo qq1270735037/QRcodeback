@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.code.qrcodeback.dao.RecordDao">
+
+    <resultMap id="BaseResultMap" type="com.code.qrcodeback.entity.Record">
+        <!--@Table record-->
+        <result property="recordId" column="record_id" jdbcType="INTEGER"/>
+        <result property="travelTime" column="travel_time" jdbcType="TIMESTAMP"/>
+        <result property="backTime" column="back_time" jdbcType="TIMESTAMP"/>
+        <result property="recordUserId" column="record_user_id" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="BaseResultMap">
+        select
+          record_id, travel_time, back_time, record_user_id
+        from record
+        where record_id = #{recordId}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="BaseResultMap">
+        select
+          record_id, travel_time, back_time, record_user_id
+        from record
+        <where>
+            <if test="recordId != null">
+                and record_id = #{recordId}
+            </if>
+            <if test="travelTime != null">
+                and travel_time = #{travelTime}
+            </if>
+            <if test="backTime != null">
+                and back_time = #{backTime}
+            </if>
+            <if test="recordUserId != null">
+                and record_user_id = #{recordUserId}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="BaseResultMap">
+        select
+          record_id, travel_time, back_time, record_user_id
+        from access.record
+    </select>
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from record
+        <where>
+            <if test="recordId != null">
+                and record_id = #{recordId}
+            </if>
+            <if test="travelTime != null">
+                and travel_time = #{travelTime}
+            </if>
+            <if test="backTime != null">
+                and back_time = #{backTime}
+            </if>
+            <if test="recordUserId != null">
+                and record_user_id = #{recordUserId}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="recordId" useGeneratedKeys="true">
+        insert into record(travel_time, back_time, record_user_id)
+        values (#{travelTime}, #{backTime}, #{recordUserId})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="recordId" useGeneratedKeys="true">
+        insert into record(travel_time, back_time, record_user_id)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.travelTime}, #{entity.backTime}, #{entity.recordUserId})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="recordId" useGeneratedKeys="true">
+        insert into record(travel_time, back_time, record_user_id)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.travelTime}, #{entity.backTime}, #{entity.recordUserId})
+        </foreach>
+        on duplicate key update
+        travel_time = values(travel_time),
+        back_time = values(back_time),
+        record_user_id = values(record_user_id)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update record
+        <set>
+            <if test="travelTime != null">
+                travel_time = #{travelTime},
+            </if>
+            <if test="backTime != null">
+                back_time = #{backTime},
+            </if>
+            <if test="recordUserId != null">
+                record_user_id = #{recordUserId},
+            </if>
+        </set>
+        where record_id = #{recordId}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from record where record_id = #{recordId}
+    </delete>
+
+</mapper>
+

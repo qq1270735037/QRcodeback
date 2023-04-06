@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.code.qrcodeback.dao.AdDao">
+
+    <resultMap id="BaseResultMap" type="com.code.qrcodeback.entity.Ad">
+        <!--@Table ad-->
+        <result property="adId" column="ad_id" jdbcType="INTEGER"/>
+        <result property="userId" column="user_id" jdbcType="INTEGER"/>
+        <result property="adName" column="ad_name" jdbcType="VARCHAR"/>
+        <result property="adMessage" column="ad_message" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="BaseResultMap">
+        select
+          ad_id, user_id, ad_name, ad_message
+        from ad
+        where ad_id = #{adId}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="BaseResultMap">
+        select
+          ad_id, user_id, ad_name, ad_message
+        from ad
+        <where>
+            <if test="adId != null">
+                and ad_id = #{adId}
+            </if>
+            <if test="userId != null">
+                and user_id = #{userId}
+            </if>
+            <if test="adName != null and adName != ''">
+                and ad_name = #{adName}
+            </if>
+            <if test="adMessage != null and adMessage != ''">
+                and ad_message = #{adMessage}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="BaseResultMap">
+        select
+          ad_id, user_id, ad_name, ad_message
+        from access.ad
+    </select>
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from ad
+        <where>
+            <if test="adId != null">
+                and ad_id = #{adId}
+            </if>
+            <if test="userId != null">
+                and user_id = #{userId}
+            </if>
+            <if test="adName != null and adName != ''">
+                and ad_name = #{adName}
+            </if>
+            <if test="adMessage != null and adMessage != ''">
+                and ad_message = #{adMessage}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="adId" useGeneratedKeys="true">
+        insert into ad(user_id, ad_name, ad_message)
+        values (#{userId}, #{adName}, #{adMessage})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="adId" useGeneratedKeys="true">
+        insert into ad(user_id, ad_name, ad_message)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.userId}, #{entity.adName}, #{entity.adMessage})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="adId" useGeneratedKeys="true">
+        insert into ad(user_id, ad_name, ad_message)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.userId}, #{entity.adName}, #{entity.adMessage})
+        </foreach>
+        on duplicate key update
+        user_id = values(user_id),
+        ad_name = values(ad_name),
+        ad_message = values(ad_message)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update ad
+        <set>
+            <if test="userId != null">
+                user_id = #{userId},
+            </if>
+            <if test="adName != null and adName != ''">
+                ad_name = #{adName},
+            </if>
+            <if test="adMessage != null and adMessage != ''">
+                ad_message = #{adMessage},
+            </if>
+        </set>
+        where ad_id = #{adId}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from ad where ad_id = #{adId}
+    </delete>
+
+</mapper>
+

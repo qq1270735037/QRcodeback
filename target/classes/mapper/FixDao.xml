@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.code.qrcodeback.dao.FixDao">
+
+    <resultMap id="BaseResultMap" type="com.code.qrcodeback.entity.Fix">
+        <!--@Table fix-->
+        <result property="fixId" column="fix_id" jdbcType="INTEGER"/>
+        <result property="userId" column="user_id" jdbcType="INTEGER"/>
+        <result property="fixName" column="fix_name" jdbcType="VARCHAR"/>
+        <result property="fixState" column="fix_state" jdbcType="INTEGER"/>
+        <result property="fixImage" column="fix_image" jdbcType="VARCHAR"/>
+        <result property="fixMessage" column="fix_message" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="BaseResultMap">
+        select
+          fix_id, user_id, fix_name, fix_state, fix_image, fix_message
+        from fix
+        where fix_id = #{fixId}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="BaseResultMap">
+        select
+          fix_id, user_id, fix_name, fix_state, fix_image, fix_message
+        from fix
+        <where>
+            <if test="fixId != null">
+                and fix_id = #{fixId}
+            </if>
+            <if test="userId != null">
+                and user_id = #{userId}
+            </if>
+            <if test="fixName != null and fixName != ''">
+                and fix_name = #{fixName}
+            </if>
+            <if test="fixState != null">
+                and fix_state = #{fixState}
+            </if>
+            <if test="fixImage != null">
+                and fix_image = #{fixImage}
+            </if>
+            <if test="fixMessage != null and fixMessage != ''">
+                and fix_message = #{fixMessage}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="BaseResultMap">
+        select
+          fix_id, user_id, fix_name, fix_state, fix_image, fix_message
+        from access.fix
+    </select>
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from fix
+        <where>
+            <if test="fixId != null">
+                and fix_id = #{fixId}
+            </if>
+            <if test="userId != null">
+                and user_id = #{userId}
+            </if>
+            <if test="fixName != null and fixName != ''">
+                and fix_name = #{fixName}
+            </if>
+            <if test="fixState != null">
+                and fix_state = #{fixState}
+            </if>
+            <if test="fixImage != null">
+                and fix_image = #{fixImage}
+            </if>
+            <if test="fixMessage != null and fixMessage != ''">
+                and fix_message = #{fixMessage}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="fixId" useGeneratedKeys="true">
+        insert into fix(user_id, fix_name, fix_state, fix_image, fix_message)
+        values (#{userId}, #{fixName}, #{fixState}, #{fixImage}, #{fixMessage})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="fixId" useGeneratedKeys="true">
+        insert into fix(user_id, fix_name, fix_state, fix_image, fix_message)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.userId}, #{entity.fixName}, #{entity.fixState}, #{entity.fixImage}, #{entity.fixMessage})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="fixId" useGeneratedKeys="true">
+        insert into fix(user_id, fix_name, fix_state, fix_image, fix_message)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.userId}, #{entity.fixName}, #{entity.fixState}, #{entity.fixImage}, #{entity.fixMessage})
+        </foreach>
+        on duplicate key update
+        user_id = values(user_id),
+        fix_name = values(fix_name),
+        fix_state = values(fix_state),
+        fix_image = values(fix_image),
+        fix_message = values(fix_message)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update fix
+        <set>
+            <if test="userId != null">
+                user_id = #{userId},
+            </if>
+            <if test="fixName != null and fixName != ''">
+                fix_name = #{fixName},
+            </if>
+            <if test="fixState != null">
+                fix_state = #{fixState},
+            </if>
+            <if test="fixImage != null">
+                fix_image = #{fixImage},
+            </if>
+            <if test="fixMessage != null and fixMessage != ''">
+                fix_message = #{fixMessage},
+            </if>
+        </set>
+        where fix_id = #{fixId}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from fix where fix_id = #{fixId}
+    </delete>
+
+</mapper>
+

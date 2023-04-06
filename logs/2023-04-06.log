@@ -1,0 +1,503 @@
+[INFO]2023-04-06 16:12:21,716 - Starting QRcodebackApplication using Java 1.8.0_301 on DESKTOP-D137OBD with PID 20868 (E:\springboot\QRcodeback\target\classes started by DAGUAISHOU in E:\springboot\QRcodeback)
+[INFO]2023-04-06 16:12:21,718 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-04-06 16:12:21,792 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO]2023-04-06 16:12:21,792 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[WARN]2023-04-06 16:12:22,801 - No MyBatis mapper was found in '[com.code.qrcodeback]' package. Please check your configuration.
+[INFO]2023-04-06 16:12:23,695 - Starting QRcodebackApplication using Java 1.8.0_301 on DESKTOP-D137OBD with PID 14324 (E:\springboot\QRcodeback\target\classes started by DAGUAISHOU in E:\springboot\QRcodeback)
+[INFO]2023-04-06 16:12:23,697 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-04-06 16:12:23,751 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO]2023-04-06 16:12:23,751 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO]2023-04-06 16:12:23,765 - Tomcat initialized with port(s): 8888 (http)
+[INFO]2023-04-06 16:12:23,766 - Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+[INFO]2023-04-06 16:12:23,766 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[INFO]2023-04-06 16:12:23,766 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO]2023-04-06 16:12:23,773 - OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+[INFO]2023-04-06 16:12:23,784 - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-06 16:12:23,785 - Starting service [Tomcat]
+[INFO]2023-04-06 16:12:23,785 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+[INFO]2023-04-06 16:12:23,975 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-04-06 16:12:23,975 - Root WebApplicationContext: initialization completed in 2182 ms
+[WARN]2023-04-06 16:12:24,062 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.code.qrcodeback.dao.AdDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+[INFO]2023-04-06 16:12:24,066 - Stopping service [Tomcat]
+[ERROR]2023-04-06 16:12:24,170 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.code.qrcodeback.dao.AdDao' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.code.qrcodeback.dao.AdDao' in your configuration.
+
+[WARN]2023-04-06 16:12:24,544 - No MyBatis mapper was found in '[com.code.qrcodeback]' package. Please check your configuration.
+[INFO]2023-04-06 16:12:25,451 - Tomcat initialized with port(s): 8888 (http)
+[INFO]2023-04-06 16:12:25,453 - Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+[INFO]2023-04-06 16:12:25,453 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[INFO]2023-04-06 16:12:25,453 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO]2023-04-06 16:12:25,460 - OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+[INFO]2023-04-06 16:12:25,486 - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-06 16:12:25,487 - Starting service [Tomcat]
+[INFO]2023-04-06 16:12:25,487 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+[INFO]2023-04-06 16:12:25,873 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-04-06 16:12:25,873 - Root WebApplicationContext: initialization completed in 2122 ms
+[WARN]2023-04-06 16:12:25,961 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.code.qrcodeback.dao.AdDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+[INFO]2023-04-06 16:12:25,965 - Stopping service [Tomcat]
+[ERROR]2023-04-06 16:12:26,034 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.code.qrcodeback.dao.AdDao' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.code.qrcodeback.dao.AdDao' in your configuration.
+
+[INFO]2023-04-06 16:12:33,266 - Starting QRcodebackApplication using Java 1.8.0_301 on DESKTOP-D137OBD with PID 12408 (E:\springboot\QRcodeback\target\classes started by DAGUAISHOU in E:\springboot\QRcodeback)
+[INFO]2023-04-06 16:12:33,267 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-04-06 16:12:33,321 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO]2023-04-06 16:12:33,321 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[WARN]2023-04-06 16:12:34,015 - No MyBatis mapper was found in '[com.code.qrcodeback]' package. Please check your configuration.
+[INFO]2023-04-06 16:12:34,488 - Tomcat initialized with port(s): 8888 (http)
+[INFO]2023-04-06 16:12:34,489 - Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+[INFO]2023-04-06 16:12:34,489 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[INFO]2023-04-06 16:12:34,489 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO]2023-04-06 16:12:34,492 - OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+[INFO]2023-04-06 16:12:34,497 - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-06 16:12:34,498 - Starting service [Tomcat]
+[INFO]2023-04-06 16:12:34,498 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+[INFO]2023-04-06 16:12:34,597 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-04-06 16:12:34,597 - Root WebApplicationContext: initialization completed in 1275 ms
+[WARN]2023-04-06 16:12:34,641 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.code.qrcodeback.dao.AdDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+[INFO]2023-04-06 16:12:34,643 - Stopping service [Tomcat]
+[ERROR]2023-04-06 16:12:34,689 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.code.qrcodeback.dao.AdDao' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.code.qrcodeback.dao.AdDao' in your configuration.
+
+[INFO]2023-04-06 16:14:25,372 - Starting QRcodebackApplication using Java 1.8.0_301 on DESKTOP-D137OBD with PID 18772 (E:\springboot\QRcodeback\target\classes started by DAGUAISHOU in E:\springboot\QRcodeback)
+[INFO]2023-04-06 16:14:25,373 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-04-06 16:14:25,413 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO]2023-04-06 16:14:25,413 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO]2023-04-06 16:14:26,342 - Tomcat initialized with port(s): 8888 (http)
+[INFO]2023-04-06 16:14:26,343 - Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+[INFO]2023-04-06 16:14:26,343 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[INFO]2023-04-06 16:14:26,343 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO]2023-04-06 16:14:26,346 - OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+[INFO]2023-04-06 16:14:26,358 - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-06 16:14:26,358 - Starting service [Tomcat]
+[INFO]2023-04-06 16:14:26,358 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+[INFO]2023-04-06 16:14:26,463 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-04-06 16:14:26,464 - Root WebApplicationContext: initialization completed in 1050 ms
+[WARN]2023-04-06 16:14:26,637 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adDao' defined in file [E:\springboot\QRcodeback\target\classes\com\code\qrcodeback\dao\AdDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\springboot\QRcodeback\target\classes\mapper\AdDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 116; columnNumber: 3; 元素类型 "select" 必须由匹配的结束标记 "</select>" 终止。
+[INFO]2023-04-06 16:14:26,639 - Stopping service [Tomcat]
+[ERROR]2023-04-06 16:14:26,688 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adDao' defined in file [E:\springboot\QRcodeback\target\classes\com\code\qrcodeback\dao\AdDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\springboot\QRcodeback\target\classes\mapper\AdDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 116; columnNumber: 3; 元素类型 "select" 必须由匹配的结束标记 "</select>" 终止。
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.code.qrcodeback.QRcodebackApplication.main(QRcodebackApplication.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adDao' defined in file [E:\springboot\QRcodeback\target\classes\com\code\qrcodeback\dao\AdDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\springboot\QRcodeback\target\classes\mapper\AdDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 116; columnNumber: 3; 元素类型 "select" 必须由匹配的结束标记 "</select>" 终止。
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:479)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:550)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 22 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adDao' defined in file [E:\springboot\QRcodeback\target\classes\com\code\qrcodeback\dao\AdDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\springboot\QRcodeback\target\classes\mapper\AdDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 116; columnNumber: 3; 元素类型 "select" 必须由匹配的结束标记 "</select>" 终止。
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1534)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:479)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:550)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 36 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\springboot\QRcodeback\target\classes\mapper\AdDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 116; columnNumber: 3; 元素类型 "select" 必须由匹配的结束标记 "</select>" 终止。
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1519)
+	... 50 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\springboot\QRcodeback\target\classes\mapper\AdDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 116; columnNumber: 3; 元素类型 "select" 必须由匹配的结束标记 "</select>" 终止。
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 63 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\springboot\QRcodeback\target\classes\mapper\AdDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 116; columnNumber: 3; 元素类型 "select" 必须由匹配的结束标记 "</select>" 终止。
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:613)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:491)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:633)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:188)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$9b694c3.CGLIB$sqlSessionFactory$2(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$9b694c3$$FastClassBySpringCGLIB$$3e70182a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$9b694c3.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 64 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 116; columnNumber: 3; 元素类型 "select" 必须由匹配的结束标记 "</select>" 终止。
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:263)
+	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:127)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:81)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:610)
+	... 77 common frames omitted
+Caused by: org.xml.sax.SAXParseException: 元素类型 "select" 必须由匹配的结束标记 "</select>" 终止。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1472)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1751)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2969)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:507)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:867)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:796)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:142)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:261)
+	... 80 common frames omitted
+[INFO]2023-04-06 16:19:46,412 - Starting QRcodebackApplication using Java 1.8.0_301 on DESKTOP-D137OBD with PID 10808 (E:\springboot\QRcodeback\target\classes started by DAGUAISHOU in E:\springboot\QRcodeback)
+[INFO]2023-04-06 16:19:46,413 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-04-06 16:19:46,457 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO]2023-04-06 16:19:46,457 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO]2023-04-06 16:19:47,372 - Tomcat initialized with port(s): 8888 (http)
+[INFO]2023-04-06 16:19:47,373 - Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+[INFO]2023-04-06 16:19:47,373 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[INFO]2023-04-06 16:19:47,373 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO]2023-04-06 16:19:47,377 - OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+[INFO]2023-04-06 16:19:47,381 - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-06 16:19:47,382 - Starting service [Tomcat]
+[INFO]2023-04-06 16:19:47,382 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+[INFO]2023-04-06 16:19:47,477 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-04-06 16:19:47,477 - Root WebApplicationContext: initialization completed in 1019 ms
+[INFO]2023-04-06 16:19:48,085 - LiveReload server is running on port 35729
+[INFO]2023-04-06 16:19:48,097 - Starting ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-06 16:19:48,114 - Tomcat started on port(s): 8888 (http) with context path ''
+[INFO]2023-04-06 16:19:48,139 - Started QRcodebackApplication in 2.2 seconds (JVM running for 4.086)
+[INFO]2023-04-06 16:19:56,209 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO]2023-04-06 16:19:56,209 - Initializing Servlet 'dispatcherServlet'
+[INFO]2023-04-06 16:19:56,211 - Completed initialization in 1 ms
+[WARN]2023-04-06 16:20:05,556 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 2 errors<EOL>Field error in object 'pageRequest' on field 'page': rejected value [null]; codes [typeMismatch.pageRequest.page,typeMismatch.page,typeMismatch.int,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [pageRequest.page,page]; arguments []; default message [page]]; default message [Failed to convert value of type 'null' to required type 'int'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [null] to type [int] for value 'null'; nested exception is java.lang.IllegalArgumentException: A null value cannot be assigned to a primitive type]<EOL>Field error in object 'pageRequest' on field 'size': rejected value [null]; codes [typeMismatch.pageRequest.size,typeMismatch.size,typeMismatch.int,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [pageRequest.size,size]; arguments []; default message [size]]; default message [Failed to convert value of type 'null' to required type 'int'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [null] to type [int] for value 'null'; nested exception is java.lang.IllegalArgumentException: A null value cannot be assigned to a primitive type]]
+[INFO]2023-04-06 16:20:09,485 - HikariPool-1 - Starting...
+[INFO]2023-04-06 16:20:09,583 - HikariPool-1 - Start completed.
+[INFO]2023-04-06 16:26:18,927 - HikariPool-1 - Shutdown initiated...
+[INFO]2023-04-06 16:26:18,936 - HikariPool-1 - Shutdown completed.
+[INFO]2023-04-06 16:30:14,778 - Starting QRcodebackApplication using Java 1.8.0_301 on DESKTOP-D137OBD with PID 16936 (E:\springboot\QRcodeback\target\classes started by DAGUAISHOU in E:\springboot\QRcodeback)
+[INFO]2023-04-06 16:30:14,780 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-04-06 16:30:14,831 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO]2023-04-06 16:30:14,832 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO]2023-04-06 16:30:15,748 - Tomcat initialized with port(s): 8888 (http)
+[INFO]2023-04-06 16:30:15,748 - Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+[INFO]2023-04-06 16:30:15,749 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[INFO]2023-04-06 16:30:15,749 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO]2023-04-06 16:30:15,752 - OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+[INFO]2023-04-06 16:30:15,758 - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-06 16:30:15,759 - Starting service [Tomcat]
+[INFO]2023-04-06 16:30:15,759 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+[INFO]2023-04-06 16:30:15,852 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-04-06 16:30:15,853 - Root WebApplicationContext: initialization completed in 1021 ms
+[WARN]2023-04-06 16:30:16,169 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adDao' defined in file [E:\springboot\QRcodeback\target\classes\com\code\qrcodeback\dao\AdDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\springboot\QRcodeback\target\classes\mapper\UserDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 182; columnNumber: 3; 元素类型 "select" 必须由匹配的结束标记 "</select>" 终止。
+[INFO]2023-04-06 16:30:16,172 - Stopping service [Tomcat]
+[ERROR]2023-04-06 16:30:16,220 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adDao' defined in file [E:\springboot\QRcodeback\target\classes\com\code\qrcodeback\dao\AdDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\springboot\QRcodeback\target\classes\mapper\UserDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 182; columnNumber: 3; 元素类型 "select" 必须由匹配的结束标记 "</select>" 终止。
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.code.qrcodeback.QRcodebackApplication.main(QRcodebackApplication.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adDao' defined in file [E:\springboot\QRcodeback\target\classes\com\code\qrcodeback\dao\AdDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\springboot\QRcodeback\target\classes\mapper\UserDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 182; columnNumber: 3; 元素类型 "select" 必须由匹配的结束标记 "</select>" 终止。
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:479)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:550)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 22 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adDao' defined in file [E:\springboot\QRcodeback\target\classes\com\code\qrcodeback\dao\AdDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\springboot\QRcodeback\target\classes\mapper\UserDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 182; columnNumber: 3; 元素类型 "select" 必须由匹配的结束标记 "</select>" 终止。
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1534)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:479)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:550)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 36 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\springboot\QRcodeback\target\classes\mapper\UserDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 182; columnNumber: 3; 元素类型 "select" 必须由匹配的结束标记 "</select>" 终止。
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1519)
+	... 50 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\springboot\QRcodeback\target\classes\mapper\UserDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 182; columnNumber: 3; 元素类型 "select" 必须由匹配的结束标记 "</select>" 终止。
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 63 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [E:\springboot\QRcodeback\target\classes\mapper\UserDao.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 182; columnNumber: 3; 元素类型 "select" 必须由匹配的结束标记 "</select>" 终止。
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:613)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:491)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:633)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:188)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$3491b812.CGLIB$sqlSessionFactory$2(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$3491b812$$FastClassBySpringCGLIB$$a3af4f9e.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$3491b812.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 64 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 182; columnNumber: 3; 元素类型 "select" 必须由匹配的结束标记 "</select>" 终止。
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:263)
+	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:127)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:81)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:610)
+	... 77 common frames omitted
+Caused by: org.xml.sax.SAXParseException: 元素类型 "select" 必须由匹配的结束标记 "</select>" 终止。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1472)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1751)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2969)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:507)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:867)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:796)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:142)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:261)
+	... 80 common frames omitted
+[INFO]2023-04-06 16:36:02,703 - Starting QRcodebackApplication using Java 1.8.0_301 on DESKTOP-D137OBD with PID 8180 (E:\springboot\QRcodeback\target\classes started by DAGUAISHOU in E:\springboot\QRcodeback)
+[INFO]2023-04-06 16:36:02,704 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-04-06 16:36:02,747 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO]2023-04-06 16:36:02,747 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO]2023-04-06 16:36:03,948 - Tomcat initialized with port(s): 8888 (http)
+[INFO]2023-04-06 16:36:03,949 - Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+[INFO]2023-04-06 16:36:03,949 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[INFO]2023-04-06 16:36:03,950 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO]2023-04-06 16:36:03,955 - OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+[INFO]2023-04-06 16:36:03,961 - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-06 16:36:03,962 - Starting service [Tomcat]
+[INFO]2023-04-06 16:36:03,962 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+[INFO]2023-04-06 16:36:04,060 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-04-06 16:36:04,060 - Root WebApplicationContext: initialization completed in 1312 ms
+[INFO]2023-04-06 16:36:04,772 - LiveReload server is running on port 35729
+[INFO]2023-04-06 16:36:04,790 - Starting ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-06 16:36:04,807 - Tomcat started on port(s): 8888 (http) with context path ''
+[INFO]2023-04-06 16:36:04,831 - Started QRcodebackApplication in 2.615 seconds (JVM running for 4.448)
+[INFO]2023-04-06 16:36:11,185 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO]2023-04-06 16:36:11,185 - Initializing Servlet 'dispatcherServlet'
+[INFO]2023-04-06 16:36:11,187 - Completed initialization in 2 ms
+[INFO]2023-04-06 16:39:09,191 - Starting QRcodebackApplication using Java 1.8.0_301 on DESKTOP-D137OBD with PID 13520 (E:\springboot\QRcodeback\target\classes started by DAGUAISHOU in E:\springboot\QRcodeback)
+[INFO]2023-04-06 16:39:09,192 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-04-06 16:39:09,246 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO]2023-04-06 16:39:09,246 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO]2023-04-06 16:39:10,393 - Tomcat initialized with port(s): 8888 (http)
+[INFO]2023-04-06 16:39:10,394 - Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+[INFO]2023-04-06 16:39:10,394 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[INFO]2023-04-06 16:39:10,395 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO]2023-04-06 16:39:10,399 - OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+[INFO]2023-04-06 16:39:10,407 - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-06 16:39:10,408 - Starting service [Tomcat]
+[INFO]2023-04-06 16:39:10,408 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+[INFO]2023-04-06 16:39:10,542 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-04-06 16:39:10,542 - Root WebApplicationContext: initialization completed in 1295 ms
+[INFO]2023-04-06 16:39:11,398 - LiveReload server is running on port 35729
+[INFO]2023-04-06 16:39:11,411 - Starting ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-06 16:39:11,430 - Tomcat started on port(s): 8888 (http) with context path ''
+[INFO]2023-04-06 16:39:11,459 - Started QRcodebackApplication in 2.838 seconds (JVM running for 5.145)
+[INFO]2023-04-06 16:39:26,001 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO]2023-04-06 16:39:26,002 - Initializing Servlet 'dispatcherServlet'
+[INFO]2023-04-06 16:39:26,003 - Completed initialization in 1 ms
+[INFO]2023-04-06 16:39:37,409 - Starting QRcodebackApplication using Java 1.8.0_301 on DESKTOP-D137OBD with PID 13520 (E:\springboot\QRcodeback\target\classes started by DAGUAISHOU in E:\springboot\QRcodeback)
+[INFO]2023-04-06 16:39:37,410 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-04-06 16:39:38,393 - Tomcat initialized with port(s): 8888 (http)
+[INFO]2023-04-06 16:39:38,393 - Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+[INFO]2023-04-06 16:39:38,393 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[INFO]2023-04-06 16:39:38,393 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO]2023-04-06 16:39:38,394 - OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+[INFO]2023-04-06 16:39:38,394 - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-06 16:39:38,395 - Starting service [Tomcat]
+[INFO]2023-04-06 16:39:38,395 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+[INFO]2023-04-06 16:39:38,465 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-04-06 16:39:38,465 - Root WebApplicationContext: initialization completed in 1052 ms
+[INFO]2023-04-06 16:39:38,826 - LiveReload server is running on port 35729
+[INFO]2023-04-06 16:39:38,841 - Starting ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-06 16:39:38,848 - Tomcat started on port(s): 8888 (http) with context path ''
+[INFO]2023-04-06 16:39:38,866 - Started QRcodebackApplication in 1.512 seconds (JVM running for 32.552)
+[INFO]2023-04-06 16:39:38,868 - Condition evaluation unchanged
+[INFO]2023-04-06 16:39:41,689 - Starting QRcodebackApplication using Java 1.8.0_301 on DESKTOP-D137OBD with PID 13520 (E:\springboot\QRcodeback\target\classes started by DAGUAISHOU in E:\springboot\QRcodeback)
+[INFO]2023-04-06 16:39:41,690 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-04-06 16:39:41,988 - Tomcat initialized with port(s): 8888 (http)
+[INFO]2023-04-06 16:39:41,989 - Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+[INFO]2023-04-06 16:39:41,989 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[INFO]2023-04-06 16:39:41,989 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO]2023-04-06 16:39:41,989 - OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+[INFO]2023-04-06 16:39:41,990 - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-06 16:39:41,990 - Starting service [Tomcat]
+[INFO]2023-04-06 16:39:41,990 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+[INFO]2023-04-06 16:39:42,029 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-04-06 16:39:42,029 - Root WebApplicationContext: initialization completed in 336 ms
+[INFO]2023-04-06 16:39:42,320 - LiveReload server is running on port 35729
+[INFO]2023-04-06 16:39:42,330 - Starting ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-06 16:39:42,336 - Tomcat started on port(s): 8888 (http) with context path ''
+[INFO]2023-04-06 16:39:42,350 - Started QRcodebackApplication in 0.702 seconds (JVM running for 36.035)
+[INFO]2023-04-06 16:39:42,350 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO]2023-04-06 16:39:42,350 - Initializing Servlet 'dispatcherServlet'
+[INFO]2023-04-06 16:39:42,352 - Completed initialization in 1 ms
+[INFO]2023-04-06 16:39:42,352 - Condition evaluation unchanged
+[INFO]2023-04-06 16:40:03,463 - Starting QRcodebackApplication using Java 1.8.0_301 on DESKTOP-D137OBD with PID 13520 (E:\springboot\QRcodeback\target\classes started by DAGUAISHOU in E:\springboot\QRcodeback)
+[INFO]2023-04-06 16:40:03,464 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-04-06 16:40:03,752 - Tomcat initialized with port(s): 8888 (http)
+[INFO]2023-04-06 16:40:03,752 - Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+[INFO]2023-04-06 16:40:03,752 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[INFO]2023-04-06 16:40:03,752 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO]2023-04-06 16:40:03,752 - OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+[INFO]2023-04-06 16:40:03,753 - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-06 16:40:03,753 - Starting service [Tomcat]
+[INFO]2023-04-06 16:40:03,753 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+[INFO]2023-04-06 16:40:03,795 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-04-06 16:40:03,795 - Root WebApplicationContext: initialization completed in 330 ms
+[INFO]2023-04-06 16:40:04,013 - LiveReload server is running on port 35729
+[INFO]2023-04-06 16:40:04,020 - Starting ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-06 16:40:04,025 - Tomcat started on port(s): 8888 (http) with context path ''
+[INFO]2023-04-06 16:40:04,041 - Started QRcodebackApplication in 0.607 seconds (JVM running for 57.727)
+[INFO]2023-04-06 16:40:04,042 - Condition evaluation unchanged
+[INFO]2023-04-06 16:40:06,680 - Starting QRcodebackApplication using Java 1.8.0_301 on DESKTOP-D137OBD with PID 13520 (E:\springboot\QRcodeback\target\classes started by DAGUAISHOU in E:\springboot\QRcodeback)
+[INFO]2023-04-06 16:40:06,680 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-04-06 16:40:06,892 - Tomcat initialized with port(s): 8888 (http)
+[INFO]2023-04-06 16:40:06,892 - Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+[INFO]2023-04-06 16:40:06,892 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[INFO]2023-04-06 16:40:06,892 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO]2023-04-06 16:40:06,893 - OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+[INFO]2023-04-06 16:40:06,893 - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-06 16:40:06,893 - Starting service [Tomcat]
+[INFO]2023-04-06 16:40:06,893 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+[INFO]2023-04-06 16:40:06,931 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-04-06 16:40:06,931 - Root WebApplicationContext: initialization completed in 248 ms
+[INFO]2023-04-06 16:40:07,119 - LiveReload server is running on port 35729
+[INFO]2023-04-06 16:40:07,125 - Starting ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-06 16:40:07,130 - Tomcat started on port(s): 8888 (http) with context path ''
+[INFO]2023-04-06 16:40:07,140 - Started QRcodebackApplication in 0.485 seconds (JVM running for 60.826)
+[INFO]2023-04-06 16:40:07,141 - Condition evaluation unchanged

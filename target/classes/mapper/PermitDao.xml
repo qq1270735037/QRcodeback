@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.code.qrcodeback.dao.PermitDao">
+
+    <resultMap id="BaseResultMap" type="com.code.qrcodeback.entity.Permit">
+        <!--@Table permit-->
+        <result property="permitId" column="permit_id" jdbcType="INTEGER"/>
+        <result property="userId" column="user_id" jdbcType="INTEGER"/>
+        <result property="permitState" column="permit_state" jdbcType="INTEGER"/>
+        <result property="permitTime" column="permit_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="BaseResultMap">
+        select
+          permit_id, user_id, permit_state, permit_time
+        from permit
+        where permit_id = #{permitId}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="BaseResultMap">
+        select
+          permit_id, user_id, permit_state, permit_time
+        from permit
+        <where>
+            <if test="permitId != null">
+                and permit_id = #{permitId}
+            </if>
+            <if test="userId != null">
+                and user_id = #{userId}
+            </if>
+            <if test="permitState != null">
+                and permit_state = #{permitState}
+            </if>
+            <if test="permitTime != null">
+                and permit_time = #{permitTime}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="BaseResultMap">
+        select
+          permit_id, user_id, permit_state, permit_time
+        from access.permit
+    </select>
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from permit
+        <where>
+            <if test="permitId != null">
+                and permit_id = #{permitId}
+            </if>
+            <if test="userId != null">
+                and user_id = #{userId}
+            </if>
+            <if test="permitState != null">
+                and permit_state = #{permitState}
+            </if>
+            <if test="permitTime != null">
+                and permit_time = #{permitTime}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="permitId" useGeneratedKeys="true">
+        insert into permit(user_id, permit_state, permit_time)
+        values (#{userId}, #{permitState}, #{permitTime})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="permitId" useGeneratedKeys="true">
+        insert into permit(user_id, permit_state, permit_time)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.userId}, #{entity.permitState}, #{entity.permitTime})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="permitId" useGeneratedKeys="true">
+        insert into permit(user_id, permit_state, permit_time)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.userId}, #{entity.permitState}, #{entity.permitTime})
+        </foreach>
+        on duplicate key update
+        user_id = values(user_id),
+        permit_state = values(permit_state),
+        permit_time = values(permit_time)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update permit
+        <set>
+            <if test="userId != null">
+                user_id = #{userId},
+            </if>
+            <if test="permitState != null">
+                permit_state = #{permitState},
+            </if>
+            <if test="permitTime != null">
+                permit_time = #{permitTime},
+            </if>
+        </set>
+        where permit_id = #{permitId}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from permit where permit_id = #{permitId}
+    </delete>
+
+</mapper>
+

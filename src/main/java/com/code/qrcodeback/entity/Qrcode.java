@@ -16,7 +16,7 @@ public class Qrcode implements Serializable {
     
     private Integer userId;
     
-    private Object codeImage;
+    private String codeImage;
     
     private Date validTime;
 
@@ -41,7 +41,7 @@ public class Qrcode implements Serializable {
         return codeImage;
     }
 
-    public void setCodeImage(Object codeImage) {
+    public void setCodeImage(String codeImage) {
         this.codeImage = codeImage;
     }
 

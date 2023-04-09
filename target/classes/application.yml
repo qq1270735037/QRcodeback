@@ -15,7 +15,12 @@ mybatis:
     map-underscore-to-camel-case: true  # 开启驼峰命名
   mapper-locations: classpath:mapper/*.xml
 spring:
-
+  servlet:
+    multipart:
+      # 单个文件大小
+      max-file-size: 100MB
+      # 设置总上传的文件大小
+      max-request-size: 200MB
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
@@ -38,7 +43,6 @@ logging:
     com.junction: debug
   #将日志输出到文件
   config: classpath:logback-spring.xml
-
 
 
 

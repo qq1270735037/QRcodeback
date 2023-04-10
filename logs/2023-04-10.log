@@ -1,0 +1,60 @@
+[INFO]2023-04-10 17:20:37,124 - Starting QRcodebackApplication using Java 1.8.0_301 on DESKTOP-D137OBD with PID 25528 (E:\springboot\QRcodeback\target\classes started by DAGUAISHOU in E:\springboot\QRcodeback)
+[INFO]2023-04-10 17:20:37,125 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-04-10 17:20:37,176 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO]2023-04-10 17:20:37,176 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO]2023-04-10 17:20:38,920 - Tomcat initialized with port(s): 8888 (http)
+[INFO]2023-04-10 17:20:38,929 - Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+[INFO]2023-04-10 17:20:38,929 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[INFO]2023-04-10 17:20:38,929 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO]2023-04-10 17:20:39,002 - OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+[INFO]2023-04-10 17:20:39,011 - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-10 17:20:39,011 - Starting service [Tomcat]
+[INFO]2023-04-10 17:20:39,011 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+[INFO]2023-04-10 17:20:39,142 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-04-10 17:20:39,142 - Root WebApplicationContext: initialization completed in 1966 ms
+[INFO]2023-04-10 17:20:40,036 - LiveReload server is running on port 35729
+[INFO]2023-04-10 17:20:40,052 - Starting ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-10 17:20:40,070 - Tomcat started on port(s): 8888 (http) with context path ''
+[INFO]2023-04-10 17:20:40,090 - Started QRcodebackApplication in 3.851 seconds (JVM running for 7.217)
+[INFO]2023-04-10 17:20:53,612 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO]2023-04-10 17:20:53,612 - Initializing Servlet 'dispatcherServlet'
+[INFO]2023-04-10 17:20:53,613 - Completed initialization in 1 ms
+[INFO]2023-04-10 22:34:29,581 - Starting QRcodebackApplication using Java 1.8.0_301 on DESKTOP-D137OBD with PID 18872 (E:\springboot\QRcodeback\target\classes started by DAGUAISHOU in E:\springboot\QRcodeback)
+[INFO]2023-04-10 22:34:29,583 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-04-10 22:34:29,648 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO]2023-04-10 22:34:29,648 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO]2023-04-10 22:34:30,867 - Tomcat initialized with port(s): 8888 (http)
+[INFO]2023-04-10 22:34:30,868 - Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+[INFO]2023-04-10 22:34:30,869 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[INFO]2023-04-10 22:34:30,869 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO]2023-04-10 22:34:30,873 - OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+[INFO]2023-04-10 22:34:30,881 - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-10 22:34:30,881 - Starting service [Tomcat]
+[INFO]2023-04-10 22:34:30,882 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+[INFO]2023-04-10 22:34:31,011 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-04-10 22:34:31,012 - Root WebApplicationContext: initialization completed in 1363 ms
+[INFO]2023-04-10 22:34:31,870 - LiveReload server is running on port 35729
+[INFO]2023-04-10 22:34:31,885 - Starting ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-10 22:34:31,905 - Tomcat started on port(s): 8888 (http) with context path ''
+[INFO]2023-04-10 22:34:31,927 - Started QRcodebackApplication in 3.152 seconds (JVM running for 5.573)
+[INFO]2023-04-10 22:34:53,424 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO]2023-04-10 22:34:53,424 - Initializing Servlet 'dispatcherServlet'
+[INFO]2023-04-10 22:34:53,425 - Completed initialization in 1 ms
+[INFO]2023-04-10 22:50:07,092 - Starting QRcodebackApplication using Java 1.8.0_301 on DESKTOP-D137OBD with PID 8844 (E:\springboot\QRcodeback\target\classes started by DAGUAISHOU in E:\springboot\QRcodeback)
+[INFO]2023-04-10 22:50:07,093 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-04-10 22:50:07,132 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO]2023-04-10 22:50:07,132 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO]2023-04-10 22:50:08,261 - Tomcat initialized with port(s): 8888 (http)
+[INFO]2023-04-10 22:50:08,262 - Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+[INFO]2023-04-10 22:50:08,262 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[INFO]2023-04-10 22:50:08,263 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO]2023-04-10 22:50:08,268 - OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+[INFO]2023-04-10 22:50:08,276 - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-10 22:50:08,276 - Starting service [Tomcat]
+[INFO]2023-04-10 22:50:08,276 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+[INFO]2023-04-10 22:50:08,380 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-04-10 22:50:08,380 - Root WebApplicationContext: initialization completed in 1248 ms
+[INFO]2023-04-10 22:50:09,073 - LiveReload server is running on port 35729
+[INFO]2023-04-10 22:50:09,086 - Starting ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-10 22:50:09,103 - Tomcat started on port(s): 8888 (http) with context path ''
+[INFO]2023-04-10 22:50:09,125 - Started QRcodebackApplication in 2.539 seconds (JVM running for 4.655)

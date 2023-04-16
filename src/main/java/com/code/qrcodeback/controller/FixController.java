@@ -5,7 +5,6 @@ import com.code.qrcodeback.service.FixService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.ClassUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -15,7 +14,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.sql.SQLOutput;
 
 /**
  * (Fix)表控制层
@@ -59,7 +57,7 @@ public class FixController {
     //上传图片
     @PostMapping(value = "/image/upload" )
     @ResponseBody
-    public void imageUpload(@RequestParam("file") MultipartFile fileUpload) {
+    public String imageUpload(@RequestParam("file") MultipartFile fileUpload) {
 
         //获取文件名
         String fileName = fileUpload.getOriginalFilename();
@@ -75,8 +73,10 @@ public class FixController {
         File upFile = new File(resourcesPath);
         try {
             fileUpload.transferTo(upFile);
+            return "success";
         } catch (IOException e) {
             e.printStackTrace();
+            return "fail";
         }
 
     }
@@ -84,7 +84,7 @@ public class FixController {
     @GetMapping("/image/look")
     public String imageLook (HttpServletResponse response) {
 
-        File file = new File( "E://springboot//QRcodeback//src//fixImage//mmexport1579364573496.jpg");
+        File file = new File( "E://springboot//QRcodeback//src//fixImage//mmexport1579364604307.jpg");
         byte[] bytes = new byte[1024];
         try (OutputStream os = response.getOutputStream();
              FileInputStream fis = new FileInputStream(file)){

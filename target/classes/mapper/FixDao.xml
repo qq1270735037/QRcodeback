@@ -38,7 +38,7 @@
             <if test="fixState != null">
                 and fix_state = #{fixState}
             </if>
-            <if test="fixImage != null">
+            <if test="fixImage != null and fixImage != ''">
                 and fix_image = #{fixImage}
             </if>
             <if test="fixMessage != null and fixMessage != ''">
@@ -54,6 +54,7 @@
           fix_id, user_id, fix_name, fix_state, fix_image, fix_message
         from access.fix
     </select>
+
     <!--统计总行数-->
     <select id="count" resultType="java.lang.Long">
         select count(1)
@@ -71,7 +72,7 @@
             <if test="fixState != null">
                 and fix_state = #{fixState}
             </if>
-            <if test="fixImage != null">
+            <if test="fixImage != null and fixImage != ''">
                 and fix_image = #{fixImage}
             </if>
             <if test="fixMessage != null and fixMessage != ''">
@@ -121,7 +122,7 @@
             <if test="fixState != null">
                 fix_state = #{fixState},
             </if>
-            <if test="fixImage != null">
+            <if test="fixImage != null and fixImage != ''">
                 fix_image = #{fixImage},
             </if>
             <if test="fixMessage != null and fixMessage != ''">

@@ -83,5 +83,17 @@ public class Apply implements Serializable {
         this.applyMessage = applyMessage;
     }
 
+    @Override
+    public String toString() {
+        return "Apply{" +
+                "applyId=" + applyId +
+                ", userId=" + userId +
+                ", applyUser=" + applyUser +
+                ", applyOwner=" + applyOwner +
+                ", applyTime=" + applyTime +
+                ", applyState=" + applyState +
+                ", applyMessage='" + applyMessage + '\'' +
+                '}';
+    }
 }
 

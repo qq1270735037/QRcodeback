@@ -1,0 +1,21 @@
+[INFO]2023-04-13 16:36:48,757 - Starting QRcodebackApplication using Java 1.8.0_301 on DESKTOP-D137OBD with PID 20296 (E:\springboot\QRcodeback\target\classes started by DAGUAISHOU in E:\springboot\QRcodeback)
+[INFO]2023-04-13 16:36:48,758 - No active profile set, falling back to 1 default profile: "default"
+[INFO]2023-04-13 16:36:48,808 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[INFO]2023-04-13 16:36:48,808 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[INFO]2023-04-13 16:36:50,093 - Tomcat initialized with port(s): 8888 (http)
+[INFO]2023-04-13 16:36:50,095 - Loaded Apache Tomcat Native library [1.2.31] using APR version [1.7.0].
+[INFO]2023-04-13 16:36:50,095 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[INFO]2023-04-13 16:36:50,095 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[INFO]2023-04-13 16:36:50,116 - OpenSSL successfully initialized [OpenSSL 1.1.1l  24 Aug 2021]
+[INFO]2023-04-13 16:36:50,125 - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-13 16:36:50,126 - Starting service [Tomcat]
+[INFO]2023-04-13 16:36:50,126 - Starting Servlet engine: [Apache Tomcat/9.0.64]
+[INFO]2023-04-13 16:36:50,235 - Initializing Spring embedded WebApplicationContext
+[INFO]2023-04-13 16:36:50,235 - Root WebApplicationContext: initialization completed in 1426 ms
+[INFO]2023-04-13 16:36:51,065 - LiveReload server is running on port 35729
+[INFO]2023-04-13 16:36:51,080 - Starting ProtocolHandler ["http-nio-8888"]
+[INFO]2023-04-13 16:36:51,102 - Tomcat started on port(s): 8888 (http) with context path ''
+[INFO]2023-04-13 16:36:51,128 - Started QRcodebackApplication in 3.055 seconds (JVM running for 5.215)
+[INFO]2023-04-13 16:55:38,035 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO]2023-04-13 16:55:38,035 - Initializing Servlet 'dispatcherServlet'
+[INFO]2023-04-13 16:55:38,036 - Completed initialization in 1 ms

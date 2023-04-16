@@ -53,5 +53,14 @@ public class Qrcode implements Serializable {
         this.validTime = validTime;
     }
 
+    @Override
+    public String toString() {
+        return "Qrcode{" +
+                "codeId=" + codeId +
+                ", userId=" + userId +
+                ", codeImage='" + codeImage + '\'' +
+                ", validTime=" + validTime +
+                '}';
+    }
 }
 

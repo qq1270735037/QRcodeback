@@ -6,10 +6,10 @@ import java.io.Serializable;
  * (Fix)实体类
  *
  * @author makejava
- * @since 2023-04-06 16:11:11
+ * @since 2023-04-15 23:59:27
  */
 public class Fix implements Serializable {
-    private static final long serialVersionUID = 899098834604017014L;
+    private static final long serialVersionUID = -65526292636240368L;
     
     private Integer fixId;
     
@@ -19,7 +19,7 @@ public class Fix implements Serializable {
     
     private Integer fixState;
     
-    private Object fixImage;
+    private String fixImage;
     
     private String fixMessage;
 
@@ -56,11 +56,11 @@ public class Fix implements Serializable {
         this.fixState = fixState;
     }
 
-    public Object getFixImage() {
+    public String getFixImage() {
         return fixImage;
     }
 
-    public void setFixImage(Object fixImage) {
+    public void setFixImage(String fixImage) {
         this.fixImage = fixImage;
     }
 

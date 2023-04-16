@@ -12,7 +12,7 @@ public class Ad implements Serializable {
     private static final long serialVersionUID = -80784363539778632L;
     
     private Integer adId;
-    
+
     private Integer userId;
     
     private String adName;
@@ -52,5 +52,14 @@ public class Ad implements Serializable {
         this.adMessage = adMessage;
     }
 
+    @Override
+    public String toString() {
+        return "Ad{" +
+                "adId=" + adId +
+                ", userId=" + userId +
+                ", adName='" + adName + '\'' +
+                ", adMessage='" + adMessage + '\'' +
+                '}';
+    }
 }
 

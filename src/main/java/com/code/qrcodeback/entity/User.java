@@ -7,16 +7,16 @@ import java.io.Serializable;
  * (User)实体类
  *
  * @author makejava
- * @since 2023-04-06 16:23:16
+ * @since 2023-04-17 00:45:08
  */
 public class User implements Serializable {
-    private static final long serialVersionUID = -79110810451729139L;
+    private static final long serialVersionUID = -98628594794053793L;
     
     private Integer userId;
     
-    private Integer codeId;
+    private String userPassword;
     
-    private Integer typeId;
+    private Integer codeId;
     
     private String userName;
     
@@ -31,6 +31,10 @@ public class User implements Serializable {
     private Date userDate;
     
     private Integer userState;
+    
+    private Long userIdcard;
+    
+    private Integer userLocation;
 
 
     public Integer getUserId() {
@@ -41,20 +45,20 @@ public class User implements Serializable {
         this.userId = userId;
     }
 
+    public String getUserPassword() {
+        return userPassword;
+    }
+
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
+    }
+
     public Integer getCodeId() {
         return codeId;
     }
 
     public void setCodeId(Integer codeId) {
         this.codeId = codeId;
-    }
-
-    public Integer getTypeId() {
-        return typeId;
-    }
-
-    public void setTypeId(Integer typeId) {
-        this.typeId = typeId;
     }
 
     public String getUserName() {
@@ -113,5 +117,38 @@ public class User implements Serializable {
         this.userState = userState;
     }
 
+    public Long getUserIdcard() {
+        return userIdcard;
+    }
+
+    public void setUserIdcard(Long userIdcard) {
+        this.userIdcard = userIdcard;
+    }
+
+    public Integer getUserLocation() {
+        return userLocation;
+    }
+
+    public void setUserLocation(Integer userLocation) {
+        this.userLocation = userLocation;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", userPassword='" + userPassword + '\'' +
+                ", codeId=" + codeId +
+                ", userName='" + userName + '\'' +
+                ", userGender='" + userGender + '\'' +
+                ", userType=" + userType +
+                ", userImage='" + userImage + '\'' +
+                ", userNumber=" + userNumber +
+                ", userDate=" + userDate +
+                ", userState=" + userState +
+                ", userIdcard=" + userIdcard +
+                ", userLocation=" + userLocation +
+                '}';
+    }
 }
 

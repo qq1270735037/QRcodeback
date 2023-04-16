@@ -2,20 +2,29 @@ package com.code.qrcodeback.controller;
 
 import com.code.qrcodeback.entity.User;
 import com.code.qrcodeback.service.UserService;
+import com.code.qrcodeback.utils.result.DataResult;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.jws.soap.SOAPBinding;
+import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.text.ParseException;
 
 /**
  * (User)表控制层
  *
  * @author makejava
- * @since 2023-04-06 16:23:15
+ * @since 2023-04-15 21:25:44
  */
 @RestController
+@CrossOrigin
 @RequestMapping("user")
 public class UserController {
     /**
@@ -64,9 +73,22 @@ public class UserController {
      * @param user 实体
      * @return 编辑结果
      */
-    @PutMapping
-    public ResponseEntity<User> edit(User user) {
-        return ResponseEntity.ok(this.userService.update(user));
+    @PostMapping("/edit")
+    public DataResult edit(@RequestBody User user) {
+        System.err.println("user"+user.toString());
+        User changeUser =userService.queryById(user.getUserId());
+        if (changeUser != null ) {
+//            changeUser.setUserName(user.getUserName());
+//            System.err.println("user"+changeUser.toString());
+            userService.update(user);
+            changeUser =userService.queryById(user.getUserId());
+            changeUser.setUserPassword("");
+            return DataResult.successByData(changeUser);
+
+
+        } else {
+            return DataResult.errByErrCode(100);
+        }
     }
 
     /**
@@ -80,5 +102,23 @@ public class UserController {
         return ResponseEntity.ok(this.userService.deleteById(id));
     }
 
+
+    //传回图片
+    @GetMapping("/image")
+    public String image (@RequestParam("userImage") String userImage,HttpServletResponse response)throws ParseException {
+        System.err.println("res:"+userImage);
+        File file = new File(userImage );
+        byte[] bytes = new byte[1024];
+        try (OutputStream os = response.getOutputStream();
+             FileInputStream fis = new FileInputStream(file)){
+            while ((fis.read(bytes)) != -1) {
+                os.write(bytes);
+                os.flush();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "success";
+    }
 }
 

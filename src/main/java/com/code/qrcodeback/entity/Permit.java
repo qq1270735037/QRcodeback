@@ -53,5 +53,14 @@ public class Permit implements Serializable {
         this.permitTime = permitTime;
     }
 
+    @Override
+    public String toString() {
+        return "Permit{" +
+                "permitId=" + permitId +
+                ", userId=" + userId +
+                ", permitState=" + permitState +
+                ", permitTime=" + permitTime +
+                '}';
+    }
 }
 

@@ -53,5 +53,14 @@ public class Record implements Serializable {
         this.recordUserId = recordUserId;
     }
 
+    @Override
+    public String toString() {
+        return "Record{" +
+                "recordId=" + recordId +
+                ", travelTime=" + travelTime +
+                ", backTime=" + backTime +
+                ", recordUserId=" + recordUserId +
+                '}';
+    }
 }
 

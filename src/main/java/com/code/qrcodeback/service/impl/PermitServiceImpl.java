@@ -2,6 +2,7 @@ package com.code.qrcodeback.service.impl;
 
 import com.code.qrcodeback.entity.Permit;
 import com.code.qrcodeback.dao.PermitDao;
+import com.code.qrcodeback.link.PermitAndApply;
 import com.code.qrcodeback.service.PermitService;
 import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
@@ -9,12 +10,13 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * (Permit)表服务实现类
  *
  * @author makejava
- * @since 2023-04-06 16:11:11
+ * @since 2023-04-23 22:50:35
  */
 @Service("permitService")
 public class PermitServiceImpl implements PermitService {
@@ -79,4 +81,7 @@ public class PermitServiceImpl implements PermitService {
     public boolean deleteById(Integer permitId) {
         return this.permitDao.deleteById(permitId) > 0;
     }
+
+    @Override
+    public List<PermitAndApply> queryAllPermitAndApply(){return this.permitDao.queryAllPermitAndApply();}
 }

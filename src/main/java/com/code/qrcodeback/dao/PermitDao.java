@@ -1,6 +1,7 @@
 package com.code.qrcodeback.dao;
 
 import com.code.qrcodeback.entity.Permit;
+import com.code.qrcodeback.link.PermitAndApply;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.data.domain.Pageable;
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.List;
  * (Permit)表数据库访问层
  *
  * @author makejava
- * @since 2023-04-06 16:11:11
+ * @since 2023-04-23 22:50:33
  */
 public interface PermitDao {
 
@@ -79,5 +80,6 @@ public interface PermitDao {
      */
     int deleteById(Integer permitId);
 
+    List<PermitAndApply> queryAllPermitAndApply();
 }
 

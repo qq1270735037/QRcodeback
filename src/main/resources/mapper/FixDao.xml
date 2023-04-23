@@ -8,14 +8,13 @@
         <result property="userId" column="user_id" jdbcType="INTEGER"/>
         <result property="fixName" column="fix_name" jdbcType="VARCHAR"/>
         <result property="fixState" column="fix_state" jdbcType="INTEGER"/>
-        <result property="fixImage" column="fix_image" jdbcType="VARCHAR"/>
         <result property="fixMessage" column="fix_message" jdbcType="VARCHAR"/>
     </resultMap>
 
     <!--查询单个-->
     <select id="queryById" resultMap="BaseResultMap">
         select
-          fix_id, user_id, fix_name, fix_state, fix_image, fix_message
+          fix_id, user_id, fix_name, fix_state, fix_message
         from fix
         where fix_id = #{fixId}
     </select>
@@ -23,7 +22,7 @@
     <!--查询指定行数据-->
     <select id="queryAllByLimit" resultMap="BaseResultMap">
         select
-          fix_id, user_id, fix_name, fix_state, fix_image, fix_message
+          fix_id, user_id, fix_name, fix_state, fix_message
         from fix
         <where>
             <if test="fixId != null">
@@ -38,9 +37,6 @@
             <if test="fixState != null">
                 and fix_state = #{fixState}
             </if>
-            <if test="fixImage != null and fixImage != ''">
-                and fix_image = #{fixImage}
-            </if>
             <if test="fixMessage != null and fixMessage != ''">
                 and fix_message = #{fixMessage}
             </if>
@@ -51,10 +47,9 @@
     <!--通过实体作为筛选条件查询-->
     <select id="queryAll" resultMap="BaseResultMap">
         select
-          fix_id, user_id, fix_name, fix_state, fix_image, fix_message
+          fix_id, user_id, fix_name, fix_state, fix_message
         from access.fix
     </select>
-
     <!--统计总行数-->
     <select id="count" resultType="java.lang.Long">
         select count(1)
@@ -72,9 +67,6 @@
             <if test="fixState != null">
                 and fix_state = #{fixState}
             </if>
-            <if test="fixImage != null and fixImage != ''">
-                and fix_image = #{fixImage}
-            </if>
             <if test="fixMessage != null and fixMessage != ''">
                 and fix_message = #{fixMessage}
             </if>
@@ -83,29 +75,28 @@
 
     <!--新增所有列-->
     <insert id="insert" keyProperty="fixId" useGeneratedKeys="true">
-        insert into fix(user_id, fix_name, fix_state, fix_image, fix_message)
-        values (#{userId}, #{fixName}, #{fixState}, #{fixImage}, #{fixMessage})
+        insert into fix(user_id, fix_name, fix_state, fix_message)
+        values (#{userId}, #{fixName}, #{fixState}, #{fixMessage})
     </insert>
 
     <insert id="insertBatch" keyProperty="fixId" useGeneratedKeys="true">
-        insert into fix(user_id, fix_name, fix_state, fix_image, fix_message)
+        insert into fix(user_id, fix_name, fix_state, fix_message)
         values
         <foreach collection="entities" item="entity" separator=",">
-        (#{entity.userId}, #{entity.fixName}, #{entity.fixState}, #{entity.fixImage}, #{entity.fixMessage})
+        (#{entity.userId}, #{entity.fixName}, #{entity.fixState}, #{entity.fixMessage})
         </foreach>
     </insert>
 
     <insert id="insertOrUpdateBatch" keyProperty="fixId" useGeneratedKeys="true">
-        insert into fix(user_id, fix_name, fix_state, fix_image, fix_message)
+        insert into fix(user_id, fix_name, fix_state, fix_message)
         values
         <foreach collection="entities" item="entity" separator=",">
-            (#{entity.userId}, #{entity.fixName}, #{entity.fixState}, #{entity.fixImage}, #{entity.fixMessage})
+            (#{entity.userId}, #{entity.fixName}, #{entity.fixState}, #{entity.fixMessage})
         </foreach>
         on duplicate key update
         user_id = values(user_id),
         fix_name = values(fix_name),
         fix_state = values(fix_state),
-        fix_image = values(fix_image),
         fix_message = values(fix_message)
     </insert>
 
@@ -121,9 +112,6 @@
             </if>
             <if test="fixState != null">
                 fix_state = #{fixState},
-            </if>
-            <if test="fixImage != null and fixImage != ''">
-                fix_image = #{fixImage},
             </if>
             <if test="fixMessage != null and fixMessage != ''">
                 fix_message = #{fixMessage},

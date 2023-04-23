@@ -1,7 +1,9 @@
 package com.code.qrcodeback.controller;
 
 import com.code.qrcodeback.entity.Fix;
+import com.code.qrcodeback.entity.User;
 import com.code.qrcodeback.service.FixService;
+import com.code.qrcodeback.utils.result.DataResult;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
@@ -9,11 +11,14 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.text.ParseException;
 
 /**
  * (Fix)表控制层
@@ -21,7 +26,7 @@ import java.io.OutputStream;
  * @author makejava
  * @since 2023-04-06 16:11:11
  */
-@CrossOrigin
+
 @RestController
 @RequestMapping("fix")
 public class FixController {
@@ -54,32 +59,34 @@ public class FixController {
         return ResponseEntity.ok(this.fixService.queryById(id));
     }
 
-    //上传图片
-    @PostMapping(value = "/image/upload" )
-    @ResponseBody
-    public String imageUpload(@RequestParam("file") MultipartFile fileUpload) {
-
-        //获取文件名
-        String fileName = fileUpload.getOriginalFilename();
-        String tmpFilePath =  "E://springboot//QRcodeback//src//fixImage"  ;
-
-        //没有路径就创建路径
-        File tmp = new File(tmpFilePath);
-        if (!tmp.exists()) {
-            tmp.mkdirs();
-        }
-        String resourcesPath = tmpFilePath + "//" + fileName;
-
-        File upFile = new File(resourcesPath);
-        try {
-            fileUpload.transferTo(upFile);
-            return "success";
-        } catch (IOException e) {
-            e.printStackTrace();
-            return "fail";
-        }
-
-    }
+//    //上传图片
+//    @PostMapping(value = "/image/upload" )
+//    @ResponseBody
+//    public String imageUpload(HttpServletRequest request, @RequestParam("file") MultipartFile fileUpload) {
+//        String userId = request.getParameter("uploadid");
+//        System.err.println("uploadid:"+userId);
+//        System.err.println("uploadid:"+userId);
+//        //获取文件名
+//        String fileName = fileUpload.getOriginalFilename();
+//        String tmpFilePath =  "E://springboot//QRcodeback//src//fixImage"  ;
+//
+//        //没有路径就创建路径
+//        File tmp = new File(tmpFilePath);
+//        if (!tmp.exists()) {
+//            tmp.mkdirs();
+//        }
+//        String resourcesPath = tmpFilePath + "//" + fileName;
+//
+//        File upFile = new File(resourcesPath);
+//        try {
+//            fileUpload.transferTo(upFile);
+//            return resourcesPath;
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//            return "fail";
+//        }
+//
+//    }
     //传回图片
     @GetMapping("/image/look")
     public String imageLook (HttpServletResponse response) {
@@ -130,5 +137,25 @@ public class FixController {
         return ResponseEntity.ok(this.fixService.deleteById(id));
     }
 
+
+//    报修上传
+@PostMapping("upload")
+public DataResult login(@RequestBody Fix fix, HttpSession session) throws ParseException {
+    System.err.println("user:" + fix.toString());
+    if (fix != null ) {
+
+        Fix fix2=fixService.insert(fix);
+        int id=fix2.getFixId();
+
+        System.err.println(fix2.toString());
+        return DataResult.successByData(fix);
+
+
+    } else {
+        return DataResult.errByErrCode(101);
+    }
+
+
+}
 }
 

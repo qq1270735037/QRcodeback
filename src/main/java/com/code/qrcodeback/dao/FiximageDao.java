@@ -1,83 +1,83 @@
 package com.code.qrcodeback.dao;
 
-import com.code.qrcodeback.entity.UserRecord;
+import com.code.qrcodeback.entity.Fiximage;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.data.domain.Pageable;
 import java.util.List;
 
 /**
- * (UserRecord)表数据库访问层
+ * (Fiximage)表数据库访问层
  *
  * @author makejava
- * @since 2023-04-06 16:11:12
+ * @since 2023-04-23 00:17:55
  */
-public interface UserRecordDao {
+public interface FiximageDao {
 
     /**
      * 通过ID查询单条数据
      *
-     * @param userId 主键
+     * @param imageId 主键
      * @return 实例对象
      */
-    UserRecord queryById(Integer userId);
+    Fiximage queryById(Integer imageId);
 
     /**
      * 查询指定行数据
      *
-     * @param userRecord 查询条件
+     * @param fiximage 查询条件
      * @param pageable         分页对象
      * @return 对象列表
      */
-    List<UserRecord> queryAllByLimit(UserRecord userRecord, @Param("pageable") Pageable pageable);
+    List<Fiximage> queryAllByLimit(Fiximage fiximage, @Param("pageable") Pageable pageable);
 
     /**
      * 统计总行数
      *
-     * @param userRecord 查询条件
+     * @param fiximage 查询条件
      * @return 总行数
      */
-    long count(UserRecord userRecord);
+    long count(Fiximage fiximage);
 
     /**
      * 新增数据
      *
-     * @param userRecord 实例对象
+     * @param fiximage 实例对象
      * @return 影响行数
      */
-    int insert(UserRecord userRecord);
+    int insert(Fiximage fiximage);
 
     /**
      * 批量新增数据（MyBatis原生foreach方法）
      *
-     * @param entities List<UserRecord> 实例对象列表
+     * @param entities List<Fiximage> 实例对象列表
      * @return 影响行数
      */
-    int insertBatch(@Param("entities") List<UserRecord> entities);
+    int insertBatch(@Param("entities") List<Fiximage> entities);
 
     /**
      * 批量新增或按主键更新数据（MyBatis原生foreach方法）
      *
-     * @param entities List<UserRecord> 实例对象列表
+     * @param entities List<Fiximage> 实例对象列表
      * @return 影响行数
      * @throws org.springframework.jdbc.BadSqlGrammarException 入参是空List的时候会抛SQL语句错误的异常，请自行校验入参
      */
-    int insertOrUpdateBatch(@Param("entities") List<UserRecord> entities);
+    int insertOrUpdateBatch(@Param("entities") List<Fiximage> entities);
 
     /**
      * 修改数据
      *
-     * @param userRecord 实例对象
+     * @param fiximage 实例对象
      * @return 影响行数
      */
-    int update(UserRecord userRecord);
+    int update(Fiximage fiximage);
 
     /**
      * 通过主键删除数据
      *
-     * @param userId 主键
+     * @param imageId 主键
      * @return 影响行数
      */
-    int deleteById(Integer userId);
+    int deleteById(Integer imageId);
 
 }
 

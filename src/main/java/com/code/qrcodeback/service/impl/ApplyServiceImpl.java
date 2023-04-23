@@ -2,6 +2,7 @@ package com.code.qrcodeback.service.impl;
 
 import com.code.qrcodeback.entity.Apply;
 import com.code.qrcodeback.dao.ApplyDao;
+import com.code.qrcodeback.link.UserAndApply;
 import com.code.qrcodeback.service.ApplyService;
 import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
@@ -9,6 +10,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * (Apply)表服务实现类
@@ -79,4 +81,10 @@ public class ApplyServiceImpl implements ApplyService {
     public boolean deleteById(Integer applyId) {
         return this.applyDao.deleteById(applyId) > 0;
     }
+
+    @Override
+    public List<UserAndApply> queryAllUserAndApply() {
+        return  this.applyDao.queryAllUserAndApply();
+    }
+
 }

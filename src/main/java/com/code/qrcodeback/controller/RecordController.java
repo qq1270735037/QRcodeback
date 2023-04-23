@@ -2,12 +2,18 @@ package com.code.qrcodeback.controller;
 
 import com.code.qrcodeback.entity.Record;
 import com.code.qrcodeback.service.RecordService;
+import com.code.qrcodeback.utils.result.DataResult;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Random;
 
 /**
  * (Record)表控制层
@@ -15,6 +21,7 @@ import javax.annotation.Resource;
  * @author makejava
  * @since 2023-04-06 16:11:11
  */
+
 @RestController
 @RequestMapping("record")
 public class RecordController {
@@ -78,6 +85,20 @@ public class RecordController {
     @DeleteMapping
     public ResponseEntity<Boolean> deleteById(Integer id) {
         return ResponseEntity.ok(this.recordService.deleteById(id));
+    }
+//   记录插入
+    @PostMapping("/insert" )
+    public DataResult insert(@RequestBody Record record, HttpSession session) throws ParseException {
+        System.err.println("record:" + record.toString());
+        if(record!=null) {
+            System.err.println(record.toString());
+            recordService.insert(record);
+            return DataResult.succ();
+        }
+        else{
+            return DataResult.errByErrCode(101);
+        }
+
     }
 
 }

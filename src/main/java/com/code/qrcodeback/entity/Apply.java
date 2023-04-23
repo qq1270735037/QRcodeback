@@ -1,5 +1,7 @@
 package com.code.qrcodeback.entity;
 
+import lombok.ToString;
+
 import java.util.Date;
 import java.io.Serializable;
 
@@ -7,14 +9,13 @@ import java.io.Serializable;
  * (Apply)实体类
  *
  * @author makejava
- * @since 2023-04-06 16:11:11
+ * @since 2023-04-22 22:30:38
  */
+@ToString
 public class Apply implements Serializable {
-    private static final long serialVersionUID = 245105088040058272L;
+    private static final long serialVersionUID = 847407592684096241L;
     
     private Integer applyId;
-    
-    private Integer userId;
     
     private Integer applyUser;
     
@@ -33,14 +34,6 @@ public class Apply implements Serializable {
 
     public void setApplyId(Integer applyId) {
         this.applyId = applyId;
-    }
-
-    public Integer getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Integer userId) {
-        this.userId = userId;
     }
 
     public Integer getApplyUser() {
@@ -83,17 +76,5 @@ public class Apply implements Serializable {
         this.applyMessage = applyMessage;
     }
 
-    @Override
-    public String toString() {
-        return "Apply{" +
-                "applyId=" + applyId +
-                ", userId=" + userId +
-                ", applyUser=" + applyUser +
-                ", applyOwner=" + applyOwner +
-                ", applyTime=" + applyTime +
-                ", applyState=" + applyState +
-                ", applyMessage='" + applyMessage + '\'' +
-                '}';
-    }
 }
 

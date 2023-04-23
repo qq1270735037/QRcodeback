@@ -13,7 +13,7 @@ import javax.annotation.Resource;
  * (Permit)表控制层
  *
  * @author makejava
- * @since 2023-04-06 16:11:11
+ * @since 2023-04-23 22:50:32
  */
 @RestController
 @RequestMapping("permit")

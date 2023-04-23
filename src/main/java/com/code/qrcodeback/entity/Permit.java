@@ -7,14 +7,14 @@ import java.io.Serializable;
  * (Permit)实体类
  *
  * @author makejava
- * @since 2023-04-06 16:11:11
+ * @since 2023-04-23 22:50:34
  */
 public class Permit implements Serializable {
-    private static final long serialVersionUID = 636552781225842552L;
+    private static final long serialVersionUID = -21789152885822843L;
     
     private Integer permitId;
     
-    private Integer userId;
+    private Integer applyId;
     
     private Integer permitState;
     
@@ -29,12 +29,12 @@ public class Permit implements Serializable {
         this.permitId = permitId;
     }
 
-    public Integer getUserId() {
-        return userId;
+    public Integer getApplyId() {
+        return applyId;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setApplyId(Integer applyId) {
+        this.applyId = applyId;
     }
 
     public Integer getPermitState() {
@@ -53,14 +53,5 @@ public class Permit implements Serializable {
         this.permitTime = permitTime;
     }
 
-    @Override
-    public String toString() {
-        return "Permit{" +
-                "permitId=" + permitId +
-                ", userId=" + userId +
-                ", permitState=" + permitState +
-                ", permitTime=" + permitTime +
-                '}';
-    }
 }
 

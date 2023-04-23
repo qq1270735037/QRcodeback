@@ -1,14 +1,18 @@
 package com.code.qrcodeback.service;
 
 import com.code.qrcodeback.entity.Permit;
+import com.code.qrcodeback.link.PermitAndApply;
+import com.code.qrcodeback.link.UserAndApply;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+
+import java.util.List;
 
 /**
  * (Permit)表服务接口
  *
  * @author makejava
- * @since 2023-04-06 16:11:11
+ * @since 2023-04-23 22:50:34
  */
 public interface PermitService {
 
@@ -53,4 +57,5 @@ public interface PermitService {
      */
     boolean deleteById(Integer permitId);
 
+    List<PermitAndApply> queryAllPermitAndApply();
 }

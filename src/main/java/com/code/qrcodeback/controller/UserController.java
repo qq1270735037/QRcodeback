@@ -1,6 +1,8 @@
 package com.code.qrcodeback.controller;
 
+import com.code.qrcodeback.entity.Record;
 import com.code.qrcodeback.entity.User;
+import com.code.qrcodeback.service.RecordService;
 import com.code.qrcodeback.service.UserService;
 import com.code.qrcodeback.utils.result.DataResult;
 import org.springframework.data.domain.Page;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import javax.jws.soap.SOAPBinding;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -24,7 +27,6 @@ import java.text.ParseException;
  * @since 2023-04-15 21:25:44
  */
 @RestController
-@CrossOrigin
 @RequestMapping("user")
 public class UserController {
     /**
@@ -32,7 +34,7 @@ public class UserController {
      */
     @Resource
     private UserService userService;
-
+    private RecordService recordService;
     /**
      * 分页查询
      *
@@ -119,6 +121,15 @@ public class UserController {
             e.printStackTrace();
         }
         return "success";
+    }
+    //   出行记录查询
+    @PostMapping("/travel" )
+    public DataResult insert(@RequestBody User user, HttpSession session) throws ParseException {
+        System.err.println("user:" + user.toString());
+
+            return DataResult.errByErrCode(101);
+
+
     }
 }
 

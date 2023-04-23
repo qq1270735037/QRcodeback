@@ -1,5 +1,7 @@
 package com.code.qrcodeback.entity;
 
+import lombok.ToString;
+
 import java.io.Serializable;
 
 /**
@@ -8,6 +10,7 @@ import java.io.Serializable;
  * @author makejava
  * @since 2023-04-15 23:59:27
  */
+@ToString
 public class Fix implements Serializable {
     private static final long serialVersionUID = -65526292636240368L;
     
@@ -19,7 +22,7 @@ public class Fix implements Serializable {
     
     private Integer fixState;
     
-    private String fixImage;
+
     
     private String fixMessage;
 
@@ -56,13 +59,7 @@ public class Fix implements Serializable {
         this.fixState = fixState;
     }
 
-    public String getFixImage() {
-        return fixImage;
-    }
 
-    public void setFixImage(String fixImage) {
-        this.fixImage = fixImage;
-    }
 
     public String getFixMessage() {
         return fixMessage;

@@ -1,8 +1,11 @@
 package com.code.qrcodeback.service;
 
 import com.code.qrcodeback.entity.Apply;
+import com.code.qrcodeback.link.UserAndApply;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+
+import java.util.List;
 
 /**
  * (Apply)表服务接口
@@ -53,4 +56,5 @@ public interface ApplyService {
      */
     boolean deleteById(Integer applyId);
 
+    List<UserAndApply> queryAllUserAndApply();
 }

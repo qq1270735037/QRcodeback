@@ -52,5 +52,6 @@ public interface RecordService {
      * @return 是否成功
      */
     boolean deleteById(Integer recordId);
+//    根据userid查询出行记录
 
 }

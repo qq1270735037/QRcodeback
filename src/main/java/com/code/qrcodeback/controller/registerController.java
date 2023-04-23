@@ -12,7 +12,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 import java.text.ParseException;
 
-@CrossOrigin
+
 @RestController
 public class registerController {
     @Resource

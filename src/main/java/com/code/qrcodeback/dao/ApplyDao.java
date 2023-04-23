@@ -1,6 +1,7 @@
 package com.code.qrcodeback.dao;
 
 import com.code.qrcodeback.entity.Apply;
+import com.code.qrcodeback.link.UserAndApply;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.data.domain.Pageable;
 import java.util.List;
@@ -79,5 +80,8 @@ public interface ApplyDao {
      */
     int deleteById(Integer applyId);
 
+
+
+    List<UserAndApply> queryAllUserAndApply();
 }
 

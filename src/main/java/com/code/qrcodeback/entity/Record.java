@@ -1,5 +1,8 @@
 package com.code.qrcodeback.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 import java.io.Serializable;
 
@@ -13,9 +16,12 @@ public class Record implements Serializable {
     private static final long serialVersionUID = 579174799078644408L;
     
     private Integer recordId;
-    
+
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date travelTime;
-    
+
+
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date backTime;
     
     private Integer recordUserId;

@@ -248,7 +248,7 @@ public class DataResult<E> implements Code {
 	 * @throws
 	 */
 	public static DataResult<JSONArray> successByDataArray(Object data) {
-		String jsonString = JSONObject.toJSONStringWithDateFormat(data, "yyyy-MM-dd hh:mm:ss", SerializerFeature.DisableCircularReferenceDetect);
+		String jsonString = JSONObject.toJSONStringWithDateFormat(data, "yyyy-MM-dd hh:mm:ss", SerializerFeature.WriteDateUseDateFormat);
 		return successByMessage(Errs.err(SUCCESS), JSONArray.parseArray(jsonString));
 	}
 	

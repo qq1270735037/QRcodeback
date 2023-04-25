@@ -4,6 +4,8 @@ import com.code.qrcodeback.entity.Fiximage;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
+import java.util.List;
+
 /**
  * (Fiximage)表服务接口
  *
@@ -53,4 +55,5 @@ public interface FiximageService {
      */
     boolean deleteById(Integer imageId);
 
+    List<Fiximage> queryByfixId(Integer fixId);
 }

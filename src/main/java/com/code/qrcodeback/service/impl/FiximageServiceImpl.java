@@ -9,6 +9,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * (Fiximage)表服务实现类
@@ -79,4 +80,10 @@ public class FiximageServiceImpl implements FiximageService {
     public boolean deleteById(Integer imageId) {
         return this.fiximageDao.deleteById(imageId) > 0;
     }
+
+    @Override
+    public List<Fiximage> queryByfixId(Integer fixId){
+        return this.fiximageDao.queryByfixId(fixId);
+    };
+
 }

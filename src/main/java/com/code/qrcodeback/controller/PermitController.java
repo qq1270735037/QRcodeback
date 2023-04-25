@@ -1,13 +1,16 @@
 package com.code.qrcodeback.controller;
 
 import com.code.qrcodeback.entity.Permit;
+import com.code.qrcodeback.link.PermitAndApply;
 import com.code.qrcodeback.service.PermitService;
+import com.code.qrcodeback.utils.result.DataResult;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * (Permit)表控制层
@@ -53,9 +56,11 @@ public class PermitController {
      * @param permit 实体
      * @return 新增结果
      */
-    @PostMapping
-    public ResponseEntity<Permit> add(Permit permit) {
-        return ResponseEntity.ok(this.permitService.insert(permit));
+    @PostMapping("/add")
+    public DataResult add(@RequestBody Permit permit) {
+        System.err.println("permit:"+permit.toString());
+        permitService.insert(permit);
+        return DataResult.errByErrCode(100);
     }
 
     /**
@@ -80,5 +85,10 @@ public class PermitController {
         return ResponseEntity.ok(this.permitService.deleteById(id));
     }
 
+    @GetMapping("/test")
+    public List<PermitAndApply> test(){
+
+        return permitService.queryAllPermitAndApply();
+    }
 }
 

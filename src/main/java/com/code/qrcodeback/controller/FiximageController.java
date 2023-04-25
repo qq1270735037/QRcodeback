@@ -2,6 +2,7 @@ package com.code.qrcodeback.controller;
 
 import com.code.qrcodeback.entity.Fiximage;
 import com.code.qrcodeback.service.FiximageService;
+import com.code.qrcodeback.utils.result.DataResult;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
@@ -10,8 +11,13 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.OutputStream;
+import java.text.ParseException;
+import java.util.List;
 
 /**
  * (Fiximage)表控制层
@@ -116,6 +122,34 @@ public class FiximageController {
             return "fail";
         }
 
+    }
+    //传回图片
+    @GetMapping("/getFixImage")
+    public String getFixImage (@RequestParam("fixImageId") String fixImageId,HttpServletResponse response)throws ParseException {
+        System.err.println("res:"+fixImageId);
+        File file = new File(fixImageId );
+        byte[] bytes = new byte[1024];
+        try (OutputStream os = response.getOutputStream();
+             FileInputStream fis = new FileInputStream(file)){
+            while ((fis.read(bytes)) != -1) {
+                os.write(bytes);
+                os.flush();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "success";
+    }
+
+    //传回图片地址列表
+    @PostMapping("getImageList")
+    public DataResult getImageList(@RequestBody Fiximage fiximage){
+        System.err.println("fiximage:"+fiximage.toString());
+        List<Fiximage> image =fiximageService.queryByfixId(fiximage.getFixId());
+        for (int i = 0; i <image.size() ; i++) {
+            System.err.println("image:"+image.get(i).getImagePic());
+        }
+        return DataResult.successByDataArray(image);
     }
 }
 

@@ -1,5 +1,6 @@
 package com.code.qrcodeback.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.code.qrcodeback.entity.Apply;
 import com.code.qrcodeback.entity.Fix;
 import com.code.qrcodeback.entity.User;
@@ -114,7 +115,9 @@ public class ApplyController {
         for (int i = 0; i < a.size(); i++) {
             System.err.println(a.get(i).toString());
         }
-        return DataResult.successByDataArray(a);
+        JSONObject jsonObject=new JSONObject();
+        jsonObject.put("All",a);
+        return DataResult.successByMessage("ok",jsonObject);
     }
 }
 

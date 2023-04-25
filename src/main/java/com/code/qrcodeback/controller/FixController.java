@@ -1,7 +1,10 @@
 package com.code.qrcodeback.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.code.qrcodeback.entity.Fix;
 import com.code.qrcodeback.entity.User;
+import com.code.qrcodeback.link.FixAndUser;
+import com.code.qrcodeback.link.UserAndApply;
 import com.code.qrcodeback.service.FixService;
 import com.code.qrcodeback.utils.result.DataResult;
 import org.springframework.data.domain.Page;
@@ -19,6 +22,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.text.ParseException;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 /**
  * (Fix)表控制层
@@ -39,8 +45,8 @@ public class FixController {
     /**
      * 分页查询
      *
-     * @param fix 筛选条件
-     * @param pageRequest      分页对象
+     * @param fix         筛选条件
+     * @param pageRequest 分页对象
      * @return 查询结果
      */
     @GetMapping
@@ -59,7 +65,7 @@ public class FixController {
         return ResponseEntity.ok(this.fixService.queryById(id));
     }
 
-//    //上传图片
+    //    //上传图片
 //    @PostMapping(value = "/image/upload" )
 //    @ResponseBody
 //    public String imageUpload(HttpServletRequest request, @RequestParam("file") MultipartFile fileUpload) {
@@ -87,23 +93,24 @@ public class FixController {
 //        }
 //
 //    }
-    //传回图片
-    @GetMapping("/image/look")
-    public String imageLook (HttpServletResponse response) {
+//    //传回图片
+//    @GetMapping("/image/look")
+//    public String imageLook(HttpServletResponse response) {
+//
+//        File file = new File("E://springboot//QRcodeback//src//fixImage//mmexport1579364604307.jpg");
+//        byte[] bytes = new byte[1024];
+//        try (OutputStream os = response.getOutputStream();
+//             FileInputStream fis = new FileInputStream(file)) {
+//            while ((fis.read(bytes)) != -1) {
+//                os.write(bytes);
+//                os.flush();
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        return "success";
+//    }
 
-        File file = new File( "E://springboot//QRcodeback//src//fixImage//mmexport1579364604307.jpg");
-        byte[] bytes = new byte[1024];
-        try (OutputStream os = response.getOutputStream();
-             FileInputStream fis = new FileInputStream(file)){
-            while ((fis.read(bytes)) != -1) {
-                os.write(bytes);
-                os.flush();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return "success";
-    }
     /**
      * 新增数据
      *
@@ -138,24 +145,40 @@ public class FixController {
     }
 
 
-//    报修上传
-@PostMapping("upload")
-public DataResult login(@RequestBody Fix fix, HttpSession session) throws ParseException {
-    System.err.println("user:" + fix.toString());
-    if (fix != null ) {
+    //    报修上传
+    @PostMapping("upload")
+    public DataResult login(@RequestBody Fix fix, HttpSession session) throws ParseException {
+        System.err.println("user:" + fix.toString());
+        if (fix != null) {
 
-        Fix fix2=fixService.insert(fix);
-        int id=fix2.getFixId();
+            Fix fix2 = fixService.insert(fix);
+            int id = fix2.getFixId();
 
-        System.err.println(fix2.toString());
-        return DataResult.successByData(fix);
+            System.err.println(fix2.toString());
+            return DataResult.successByData(fix);
 
 
-    } else {
-        return DataResult.errByErrCode(101);
+        } else {
+            return DataResult.errByErrCode(101);
+        }
+
+
+    }
+
+    //    申请列表
+    @PostMapping("search")
+    public DataResult search() {
+        List<FixAndUser> FixAndUserList = fixService.queryAllFixAndUser();
+        //先排序时间后逆序
+        Collections.sort(FixAndUserList, Comparator.comparing(FixAndUser::getFixState).reversed());
+
+        for (int i = 0; i < FixAndUserList.size(); i++) {
+            System.err.println(FixAndUserList.get(i).toString());
+        }
+
+        return DataResult.successByDataArray(FixAndUserList);
     }
 
 
-}
 }
 

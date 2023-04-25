@@ -103,5 +103,11 @@
         delete from fiximage where image_id = #{imageId}
     </delete>
 
+    <select id="queryByfixId" resultMap="BaseResultMap">
+        select
+            image_pic
+        from access.fiximage
+        where fix_id = #{fixId}
+    </select>
 </mapper>
 

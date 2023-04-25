@@ -1,8 +1,11 @@
 package com.code.qrcodeback.service;
 
 import com.code.qrcodeback.entity.Fix;
+import com.code.qrcodeback.link.FixAndUser;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+
+import java.util.List;
 
 /**
  * (Fix)表服务接口
@@ -53,4 +56,5 @@ public interface FixService {
      */
     boolean deleteById(Integer fixId);
 
+    List<FixAndUser> queryAllFixAndUser();
 }

@@ -14,7 +14,7 @@
         <result property="permitId" column="permit_id" jdbcType="INTEGER"/>
         <result property="applyId" column="apply_id" jdbcType="INTEGER"/>
         <result property="permitState" column="permit_state" jdbcType="INTEGER"/>
-        <result property="userName" column="user_name" jdbcType="INTEGER"/>
+        <result property="userName" column="user_name" jdbcType="VARCHAR"/>
         <result property="permitTime" column="permit_time" jdbcType="TIMESTAMP"/>
         <result property="applyUser" column="apply_user" jdbcType="INTEGER"/>
         <result property="userImage" column="user_image" jdbcType="VARCHAR"/>
@@ -127,9 +127,11 @@
     <!--通过查询-->
 
     <select id="queryAllPermitAndApply" resultMap="PermitAndApply">
-        select permit_id,user_name,user_image,apply_user,permit_state,permit_time
+        select permit_id,user_name,access.permit.apply_id,user_image,apply_user,permit_state,permit_time
         from access.apply,access.user,access.permit
         where apply_user = user_id
+        and access.apply.apply_id=access.permit.apply_id
+
 
     </select>
 

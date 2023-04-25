@@ -47,12 +47,7 @@ public class test {
 //            System.err.println(date);
 //        }
 
-        List<PermitAndApply> a = permitService.queryAllPermitAndApply();
-        if(a!=null){
-            for (int i = 0; i < a.size(); i++) {
-                System.err.println(a.get(i).toString());
-            }
-        }
+
 
 
         return "test1";

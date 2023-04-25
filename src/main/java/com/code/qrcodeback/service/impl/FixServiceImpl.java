@@ -2,6 +2,7 @@ package com.code.qrcodeback.service.impl;
 
 import com.code.qrcodeback.entity.Fix;
 import com.code.qrcodeback.dao.FixDao;
+import com.code.qrcodeback.link.FixAndUser;
 import com.code.qrcodeback.service.FixService;
 import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
@@ -9,6 +10,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * (Fix)表服务实现类
@@ -78,5 +80,10 @@ public class FixServiceImpl implements FixService {
     @Override
     public boolean deleteById(Integer fixId) {
         return this.fixDao.deleteById(fixId) > 0;
+    }
+
+    @Override
+    public List<FixAndUser> queryAllFixAndUser(){
+        return this.fixDao.queryAllFixAndUser();
     }
 }

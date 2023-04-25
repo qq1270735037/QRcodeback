@@ -11,6 +11,17 @@
         <result property="fixMessage" column="fix_message" jdbcType="VARCHAR"/>
     </resultMap>
 
+    <resultMap id="FixAndUser" type="com.code.qrcodeback.link.FixAndUser">
+        <!--@Table FixAndUser-->
+        <result property="fixId" column="fix_id" jdbcType="INTEGER"/>
+        <result property="userId" column="user_id" jdbcType="INTEGER"/>
+        <result property="fixName" column="fix_name" jdbcType="VARCHAR"/>
+        <result property="fixState" column="fix_state" jdbcType="INTEGER"/>
+        <result property="fixMessage" column="fix_message" jdbcType="VARCHAR"/>
+        <result property="userName" column="user_name" jdbcType="VARCHAR"/>
+        <result property="userNumber" column="user_number" jdbcType="INTEGER"/>
+    </resultMap>
+
     <!--查询单个-->
     <select id="queryById" resultMap="BaseResultMap">
         select
@@ -125,5 +136,15 @@
         delete from fix where fix_id = #{fixId}
     </delete>
 
+    <!--查询全部-->
+
+    <select id="queryAllFixAndUser" resultMap="FixAndUser">
+        select user_name,user_number,access.fix.user_id,fix_id,fix_name, fix_state, fix_message
+        from access.fix,access.user
+        where access.fix.user_id = access.user.user_id
+
+
+
+    </select>
 </mapper>
 

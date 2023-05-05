@@ -62,8 +62,11 @@ public class LoginController {
 //        Date date=new Date();
 //        System.err.println("date:"+date);
         if (loginUser != null && loginUser.getUserPassword().equals(user.getUserPassword()) && loginUser.getUserType().equals(user.getUserType())) {
+//            if(loginUser.getUserState().equals(0)){
+//                return DataResult.errByErrCode(108);
+//            }
             loginUser.setUserPassword("");
-            System.err.println("user"+loginUser.getUserDate());
+            System.err.println("static.user" +loginUser.toString());
             return DataResult.successByData(loginUser);
 
 

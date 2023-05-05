@@ -86,4 +86,14 @@ public class FixServiceImpl implements FixService {
     public List<FixAndUser> queryAllFixAndUser(){
         return this.fixDao.queryAllFixAndUser();
     }
+
+    @Override
+    public List<FixAndUser> queryByState(Integer fixState){
+        return this.fixDao.queryByState(fixState);
+    }
+
+    @Override
+    public List<FixAndUser> queryAllFixAndUserById(Integer userId){
+        return this.fixDao.queryAllFixAndUserById(userId);
+    }
 }

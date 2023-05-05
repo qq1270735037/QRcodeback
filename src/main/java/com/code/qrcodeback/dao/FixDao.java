@@ -81,5 +81,9 @@ public interface FixDao {
     int deleteById(Integer fixId);
 
     List<FixAndUser> queryAllFixAndUser();
+
+    List<FixAndUser> queryByState(Integer fixState);
+
+    List<FixAndUser> queryAllFixAndUserById(Integer userId);
 }
 

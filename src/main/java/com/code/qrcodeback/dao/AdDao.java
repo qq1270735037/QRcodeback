@@ -1,6 +1,7 @@
 package com.code.qrcodeback.dao;
 
 import com.code.qrcodeback.entity.Ad;
+import com.code.qrcodeback.link.FixAndUser;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.data.domain.Pageable;
 import java.util.List;
@@ -79,5 +80,6 @@ public interface AdDao {
      */
     int deleteById(Integer adId);
 
+    List<Ad> searchAll();
 }
 

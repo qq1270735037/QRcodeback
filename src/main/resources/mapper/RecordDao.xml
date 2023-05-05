@@ -10,6 +10,15 @@
         <result property="recordUserId" column="record_user_id" jdbcType="INTEGER"/>
     </resultMap>
 
+    <resultMap id="RecordAndUser" type="com.code.qrcodeback.link.RecordAndUser">
+        <!--@Table RecordAndUser-->
+        <result property="recordId" column="record_id" jdbcType="INTEGER"/>
+        <result property="userName" column="user_name" jdbcType="VARCHAR"/>
+        <result property="userImage" column="user_image" jdbcType="VARCHAR"/>
+        <result property="backTime" column="back_time" jdbcType="TIMESTAMP"/>
+        <result property="recordUserId" column="record_user_id" jdbcType="INTEGER"/>
+    </resultMap>
+
     <!--查询单个-->
     <select id="queryById" resultMap="BaseResultMap">
         select
@@ -113,6 +122,38 @@
     <delete id="deleteById">
         delete from record where record_id = #{recordId}
     </delete>
+
+<!--    通过userid-->
+    <select id="searchById" resultMap="BaseResultMap">
+        select *
+        from record
+        where record_user_id = #{recordUserId}
+
+    </select>
+
+    <select id="searchAll" resultMap="RecordAndUser">
+        select *
+        from access.record,access.user
+        where access.record.record_user_id = access.user.user_id
+
+    </select>
+
+    <select id="searchAllById" resultMap="RecordAndUser">
+        select *
+        from access.record,access.user
+        where access.record.record_user_id = access.user.user_id
+        and access.record.record_user_id=#{recordUserId}
+
+    </select>
+
+    <select id="searchAllByName" resultMap="RecordAndUser">
+        select *
+        from record,user
+        where record_user_id =user_id
+          and user_name like concat('%',#{userName},'%')
+
+    </select>
+
 
 </mapper>
 

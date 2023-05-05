@@ -57,5 +57,9 @@ public interface PermitService {
      */
     boolean deleteById(Integer permitId);
 
-    List<PermitAndApply> queryAllPermitAndApply();
+    List<PermitAndApply> queryByPermitAndApplyId();
+
+    List<PermitAndApply> queryAllPermitAndApply(PermitAndApply permitAndApply);
+
+    List<PermitAndApply> queryByIdPermitAndApply(PermitAndApply permitAndApply);
 }

@@ -1,8 +1,10 @@
 package com.code.qrcodeback.controller;
 
 import com.code.qrcodeback.entity.Permit;
+import com.code.qrcodeback.entity.User;
 import com.code.qrcodeback.link.PermitAndApply;
 import com.code.qrcodeback.service.PermitService;
+import com.code.qrcodeback.service.UserService;
 import com.code.qrcodeback.utils.result.DataResult;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -26,7 +28,8 @@ public class PermitController {
      */
     @Resource
     private PermitService permitService;
-
+    @Resource
+    private UserService userService;
     /**
      * 分页查询
      *
@@ -50,16 +53,21 @@ public class PermitController {
         return ResponseEntity.ok(this.permitService.queryById(id));
     }
 
-    /**
-     * 新增数据
-     *
-     * @param permit 实体
-     * @return 新增结果
-     */
+
     @PostMapping("/add")
-    public DataResult add(@RequestBody Permit permit) {
-        System.err.println("permit:"+permit.toString());
+    public DataResult add(@RequestBody PermitAndApply permitAndApply) {
+        System.err.println("permitAndApply:"+permitAndApply.toString());
+        Permit permit = new Permit();
+        permit.setPermitState(permitAndApply.getPermitState());
+        permit.setApplyId(permitAndApply.getApplyId());
+        permit.setPermitTime(permitAndApply.getPermitTime());
         permitService.insert(permit);
+        if(permit.getPermitState().equals(1)){
+            User user =new User();
+            user.setUserId(permitAndApply.getApplyUser());
+            user.setUserState(1);
+            userService.update(user);
+        }
         return DataResult.errByErrCode(100);
     }
 
@@ -85,10 +93,22 @@ public class PermitController {
         return ResponseEntity.ok(this.permitService.deleteById(id));
     }
 
-    @GetMapping("/test")
-    public List<PermitAndApply> test(){
+    @GetMapping("/searchPermit")
+    public List<PermitAndApply> searchPermit(){
 
-        return permitService.queryAllPermitAndApply();
+        return permitService.queryByPermitAndApplyId();
+    }
+
+    @PostMapping("/searchAllPermit")
+    public List<PermitAndApply> searchAllPermit(@RequestBody PermitAndApply permitAndApply){
+
+        return permitService.queryAllPermitAndApply(permitAndApply);
+    }
+
+    @PostMapping("/searchAllPermitById")
+    public List<PermitAndApply> searchAllPermitById(@RequestBody PermitAndApply permitAndApply){
+        System.err.println(permitAndApply);
+        return permitService.queryByIdPermitAndApply(permitAndApply);
     }
 }
 

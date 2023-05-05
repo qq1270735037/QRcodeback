@@ -8,25 +8,20 @@ import lombok.ToString;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class PermitAndApply {
-    private Integer permitId;
-    private Integer applyId;
-    private Integer applyUser;
-    private Integer permitState;
+public class RecordAndUser {
+
+    private Integer recordId;
+
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
     @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
-    private Date permitTime;
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
-    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
-    private Date applyTime;
+    private Date backTime;
+
+    private Integer recordUserId;
+
     private String userName;
     private String userImage;
-    private Integer applyState;
-    private Long userIdcard;
-
 }

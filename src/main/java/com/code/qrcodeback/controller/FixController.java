@@ -118,7 +118,7 @@ public class FixController {
      * @return 新增结果
      */
     @PostMapping
-    public ResponseEntity<Fix> add(Fix fix) {
+    public ResponseEntity<Fix> add(@RequestBody  Fix fix) {
         return ResponseEntity.ok(this.fixService.insert(fix));
     }
 
@@ -129,7 +129,7 @@ public class FixController {
      * @return 编辑结果
      */
     @PutMapping
-    public ResponseEntity<Fix> edit(Fix fix) {
+    public ResponseEntity<Fix> edit(@RequestBody Fix fix) {
         return ResponseEntity.ok(this.fixService.update(fix));
     }
 
@@ -165,12 +165,12 @@ public class FixController {
 
     }
 
-    //    申请列表
+    //    报修列表全部
     @PostMapping("search")
     public DataResult search() {
         List<FixAndUser> FixAndUserList = fixService.queryAllFixAndUser();
         //先排序时间后逆序
-        Collections.sort(FixAndUserList, Comparator.comparing(FixAndUser::getFixState).reversed());
+        Collections.sort(FixAndUserList, Comparator.comparing(FixAndUser::getFixState));
 
         for (int i = 0; i < FixAndUserList.size(); i++) {
             System.err.println(FixAndUserList.get(i).toString());
@@ -178,7 +178,25 @@ public class FixController {
 
         return DataResult.successByDataArray(FixAndUserList);
     }
+    //    报修列表状态
+    @PostMapping("searchByState")
+    public DataResult searchByState(@RequestBody Fix fix) {
 
+        List<FixAndUser> o = fixService.queryByState(Integer.valueOf(fix.getFixState()));
+        for (int i = 0; i < o.size(); i++) {
+            System.err.println(o.get(i).toString());
+        }
+        return DataResult.successByDataArray(o);
+    }
+    // 根据Id查询
+    @PostMapping("searchById")
+    public DataResult searchById(@RequestBody Fix fix) {
 
+        List<FixAndUser> o = fixService.queryAllFixAndUserById(Integer.valueOf(fix.getUserId()));
+        for (int i = 0; i < o.size(); i++) {
+            System.err.println(o.get(i).toString());
+        }
+        return DataResult.successByDataArray(o);
+    }
 }
 

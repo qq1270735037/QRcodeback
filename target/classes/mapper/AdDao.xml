@@ -113,6 +113,12 @@
     <delete id="deleteById">
         delete from ad where ad_id = #{adId}
     </delete>
+<!--    查全部-->
+    <select id="searchAll" resultMap="BaseResultMap">
+        select
+            ad_id, ad_name
+        from ad
 
+    </select>
 </mapper>
 

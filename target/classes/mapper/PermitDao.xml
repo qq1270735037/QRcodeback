@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.code.qrcodeback.dao.PermitDao">
-
     <resultMap id="BaseResultMap" type="com.code.qrcodeback.entity.Permit">
         <!--@Table permit-->
         <result property="permitId" column="permit_id" jdbcType="INTEGER"/>
@@ -18,12 +17,15 @@
         <result property="permitTime" column="permit_time" jdbcType="TIMESTAMP"/>
         <result property="applyUser" column="apply_user" jdbcType="INTEGER"/>
         <result property="userImage" column="user_image" jdbcType="VARCHAR"/>
+        <result property="applyState" column="apply_state" jdbcType="INTEGER"/>
     </resultMap>
 
     <!--查询单个-->
     <select id="queryById" resultMap="BaseResultMap">
-        select
-          permit_id, apply_id, permit_state, permit_time
+        select permit_id,
+               apply_id,
+               permit_state,
+               permit_time
         from permit
         where permit_id = #{permitId}
     </select>
@@ -31,7 +33,7 @@
     <!--查询指定行数据-->
     <select id="queryAllByLimit" resultMap="BaseResultMap">
         select
-          permit_id, apply_id, permit_state, permit_time
+        permit_id, apply_id, permit_state, permit_time
         from permit
         <where>
             <if test="permitId != null">
@@ -52,8 +54,10 @@
 
     <!--通过实体作为筛选条件查询-->
     <select id="queryAll" resultMap="BaseResultMap">
-        select
-          permit_id, apply_id, permit_state, permit_time
+        select permit_id,
+               apply_id,
+               permit_state,
+               permit_time
         from access.permit
     </select>
     <!--统计总行数-->
@@ -86,7 +90,7 @@
         insert into permit(apply_id, permit_state, permit_time)
         values
         <foreach collection="entities" item="entity" separator=",">
-        (#{entity.applyId}, #{entity.permitState}, #{entity.permitTime})
+            (#{entity.applyId}, #{entity.permitState}, #{entity.permitTime})
         </foreach>
     </insert>
 
@@ -121,19 +125,50 @@
 
     <!--通过主键删除-->
     <delete id="deleteById">
-        delete from permit where permit_id = #{permitId}
+        delete
+        from permit
+        where permit_id = #{permitId}
     </delete>
 
-    <!--通过查询-->
+    <!--查询全部-->
 
-    <select id="queryAllPermitAndApply" resultMap="PermitAndApply">
-        select permit_id,user_name,access.permit.apply_id,user_image,apply_user,permit_state,permit_time
-        from access.apply,access.user,access.permit
+    <select id="queryByPermitAndApplyId" resultMap="PermitAndApply">
+        select permit_id,
+               user_name,
+               access.permit.apply_id,
+               user_image,
+               apply_user,
+                apply_time,
+               permit_state,
+               permit_time,
+               apply_state
+        from access.apply,
+             access.user,
+             access.permit
         where apply_user = user_id
-        and access.apply.apply_id=access.permit.apply_id
-
-
+          and access.apply.apply_id = access.permit.apply_id
     </select>
 
+    <select id="queryAllPermitAndApply" resultMap="PermitAndApply">
+        select *
+        from (select user_name, apply_id, user_image, apply_user, apply_state,user_idcard,apply_time
+              from access.apply,
+                   access.user
+              where apply_user = user_id) as u
+                 left join access.permit
+                           on u.apply_id = permit.apply_id
+        where apply_state=#{applyState}
+    </select>
+
+    <select id="queryByIdPermitAndApply" resultMap="PermitAndApply">
+        select *
+        from (select user_name, apply_id, user_image, apply_user, apply_state,user_idcard,apply_time
+              from access.apply,
+                   access.user
+              where apply_user = user_id) as u
+                 left join access.permit
+                           on u.apply_id = permit.apply_id
+        where apply_user=#{applyUser}
+    </select>
 </mapper>
 

@@ -1,8 +1,11 @@
 package com.code.qrcodeback.service;
 
 import com.code.qrcodeback.entity.Ad;
+import com.code.qrcodeback.link.FixAndUser;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+
+import java.util.List;
 
 /**
  * (Ad)表服务接口
@@ -52,5 +55,6 @@ public interface AdService {
      * @return 是否成功
      */
     boolean deleteById(Integer adId);
+    List<Ad> searchAll();
 
 }

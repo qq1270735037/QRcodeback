@@ -2,6 +2,8 @@ package com.code.qrcodeback.service.impl;
 
 import com.code.qrcodeback.entity.Record;
 import com.code.qrcodeback.dao.RecordDao;
+import com.code.qrcodeback.link.PermitAndApply;
+import com.code.qrcodeback.link.RecordAndUser;
 import com.code.qrcodeback.service.RecordService;
 import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
@@ -9,6 +11,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * (Record)表服务实现类
@@ -79,4 +82,26 @@ public class RecordServiceImpl implements RecordService {
     public boolean deleteById(Integer recordId) {
         return this.recordDao.deleteById(recordId) > 0;
     }
+
+    @Override
+    public List<Record> searchById(Integer recordUserId){
+        return this.recordDao.searchById(recordUserId);
+    }
+
+    @Override
+    public List<RecordAndUser> searchAll(){
+        return this.recordDao.searchAll();
+    }
+
+    @Override
+    public List<RecordAndUser> searchAllById(Integer recordUserId){
+        return this.recordDao.searchAllById(recordUserId);
+    }
+
+    @Override
+    public List<RecordAndUser> searchAllByName(String userName){
+        return this.recordDao.searchAllByName(userName);
+    }
+
+
 }

@@ -2,6 +2,7 @@ package com.code.qrcodeback.service.impl;
 
 import com.code.qrcodeback.entity.Ad;
 import com.code.qrcodeback.dao.AdDao;
+import com.code.qrcodeback.link.FixAndUser;
 import com.code.qrcodeback.service.AdService;
 import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
@@ -9,6 +10,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * (Ad)表服务实现类
@@ -78,5 +80,11 @@ public class AdServiceImpl implements AdService {
     @Override
     public boolean deleteById(Integer adId) {
         return this.adDao.deleteById(adId) > 0;
+    }
+
+
+    @Override
+    public List<Ad> searchAll(){
+        return this.adDao.searchAll();
     }
 }

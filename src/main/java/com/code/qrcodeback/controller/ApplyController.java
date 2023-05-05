@@ -34,12 +34,14 @@ public class ApplyController {
      */
     @Resource
     private ApplyService applyService;
+    @Resource
     private UserService userService;
+
     /**
      * 分页查询
      *
-     * @param apply 筛选条件
-     * @param pageRequest      分页对象
+     * @param apply       筛选条件
+     * @param pageRequest 分页对象
      * @return 查询结果
      */
     @GetMapping
@@ -64,9 +66,29 @@ public class ApplyController {
      * @param apply 实体
      * @return 新增结果
      */
-    @PostMapping
-    public ResponseEntity<Apply> add(Apply apply) {
-        return ResponseEntity.ok(this.applyService.insert(apply));
+    @PostMapping("/add")
+    public DataResult add(@RequestBody Apply apply) {
+        if (apply.getApplyState() != null && apply.getApplyUser() != null) {
+            User user =this.userService.queryById(apply.getApplyUser());
+            if(user==null){
+                return DataResult.errByErrCode(101);
+            }
+            if(user.getUserType()==2){
+
+                Apply o = this.applyService.insert(apply);
+                return DataResult.successByData(o);
+            }
+            else{
+                //确认是不是游客
+                return DataResult.errByErrCode(101);
+            }
+
+
+
+        }
+
+        return DataResult.errByErrCode(102);
+
     }
 
     /**
@@ -77,12 +99,12 @@ public class ApplyController {
      */
     @PostMapping("/edit")
     public DataResult edit(@RequestBody Apply apply) {
-        System.err.println("apply:"+apply.toString());
-        Apply changeApply =applyService.queryById(apply.getApplyId());
-        if (changeApply != null ) {
+        System.err.println("apply:" + apply.toString());
+        Apply changeApply = applyService.queryById(apply.getApplyId());
+        if (changeApply != null) {
 
             applyService.update(apply);
-            changeApply =applyService.queryById(apply.getApplyId());
+            changeApply = applyService.queryById(apply.getApplyId());
 
             return DataResult.successByData(changeApply);
 
@@ -115,9 +137,9 @@ public class ApplyController {
         for (int i = 0; i < a.size(); i++) {
             System.err.println(a.get(i).toString());
         }
-        JSONObject jsonObject=new JSONObject();
-        jsonObject.put("All",a);
-        return DataResult.successByMessage("ok",jsonObject);
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("All", a);
+        return DataResult.successByMessage("ok", jsonObject);
     }
 }
 

@@ -30,6 +30,9 @@ spring:
     #热部署生效,默认就是true
     restart:
       enabled: true
+  mvc:
+    static-path-pattern: /**
+
 #分页插件配置
 pagehelper:
   helper-dialect: mysql

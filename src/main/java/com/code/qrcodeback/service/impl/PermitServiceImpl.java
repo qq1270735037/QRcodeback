@@ -37,8 +37,8 @@ public class PermitServiceImpl implements PermitService {
     /**
      * 分页查询
      *
-     * @param permit 筛选条件
-     * @param pageRequest      分页对象
+     * @param permit      筛选条件
+     * @param pageRequest 分页对象
      * @return 查询结果
      */
     @Override
@@ -83,5 +83,17 @@ public class PermitServiceImpl implements PermitService {
     }
 
     @Override
-    public List<PermitAndApply> queryAllPermitAndApply(){return this.permitDao.queryAllPermitAndApply();}
+    public List<PermitAndApply> queryByPermitAndApplyId() {
+        return this.permitDao.queryByPermitAndApplyId();
+    }
+
+    @Override
+    public List<PermitAndApply> queryAllPermitAndApply(PermitAndApply permitAndApply) {
+        return this.permitDao.queryAllPermitAndApply(permitAndApply);
+    }
+
+    @Override
+    public List<PermitAndApply> queryByIdPermitAndApply(PermitAndApply permitAndApply) {
+        return this.permitDao.queryByIdPermitAndApply(permitAndApply);
+    }
 }

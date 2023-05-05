@@ -1,8 +1,13 @@
 package com.code.qrcodeback.service;
 
 import com.code.qrcodeback.entity.Record;
+import com.code.qrcodeback.entity.User;
+import com.code.qrcodeback.link.PermitAndApply;
+import com.code.qrcodeback.link.RecordAndUser;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+
+import java.util.List;
 
 /**
  * (Record)表服务接口
@@ -52,6 +57,11 @@ public interface RecordService {
      * @return 是否成功
      */
     boolean deleteById(Integer recordId);
-//    根据userid查询出行记录
+    //    根据userid查询出行记录
+    List<Record> searchById(Integer recordUserId);
+    List<RecordAndUser> searchAll();
 
+    List<RecordAndUser> searchAllById(Integer recordUserId);
+
+    List<RecordAndUser> searchAllByName(String userName);
 }

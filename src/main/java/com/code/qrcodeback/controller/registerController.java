@@ -23,6 +23,8 @@ public class registerController {
         System.err.println("user:" + user.toString());
         User loginUser =userService.queryById(user.getUserId());
         if(loginUser==null) {
+            user.setUserState(0);
+//            user.setUserType(2);
             userService.insert(user);
             return DataResult.succ();
         }

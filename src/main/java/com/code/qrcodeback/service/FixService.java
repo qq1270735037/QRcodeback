@@ -57,4 +57,8 @@ public interface FixService {
     boolean deleteById(Integer fixId);
 
     List<FixAndUser> queryAllFixAndUser();
+
+    List<FixAndUser> queryByState(Integer fixState);
+
+    List<FixAndUser> queryAllFixAndUserById(Integer userId);
 }

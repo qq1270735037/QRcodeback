@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 @RestController
-@Controller
+
 
 public class test {
     @Resource
@@ -48,9 +48,11 @@ public class test {
 //        }
 
 
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date date =new Date();
+        String d = sdf.format(date);
 
-
-        return "test1";
+        return d;
     }
 
 }

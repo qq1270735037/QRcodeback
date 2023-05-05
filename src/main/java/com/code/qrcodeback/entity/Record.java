@@ -1,6 +1,10 @@
 package com.code.qrcodeback.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
@@ -12,15 +16,19 @@ import java.io.Serializable;
  * @author makejava
  * @since 2023-04-06 16:11:11
  */
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class Record implements Serializable {
     private static final long serialVersionUID = 579174799078644408L;
     
     private Integer recordId;
-
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
     @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date travelTime;
 
-
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
     @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date backTime;
     

@@ -1,5 +1,10 @@
 package com.code.qrcodeback.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
 import java.util.Date;
 import java.io.Serializable;
 
@@ -9,6 +14,10 @@ import java.io.Serializable;
  * @author makejava
  * @since 2023-04-17 00:45:08
  */
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class User implements Serializable {
     private static final long serialVersionUID = -98628594794053793L;
     
@@ -32,7 +41,7 @@ public class User implements Serializable {
     
     private Integer userState;
     
-    private Long userIdcard;
+    private String userIdcard;
     
     private Integer userLocation;
 
@@ -117,11 +126,11 @@ public class User implements Serializable {
         this.userState = userState;
     }
 
-    public Long getUserIdcard() {
+    public String getUserIdcard() {
         return userIdcard;
     }
 
-    public void setUserIdcard(Long userIdcard) {
+    public void setUserIdcard(String userIdcard) {
         this.userIdcard = userIdcard;
     }
 
@@ -133,22 +142,6 @@ public class User implements Serializable {
         this.userLocation = userLocation;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "userId=" + userId +
-                ", userPassword='" + userPassword + '\'' +
-                ", codeId=" + codeId +
-                ", userName='" + userName + '\'' +
-                ", userGender='" + userGender + '\'' +
-                ", userType=" + userType +
-                ", userImage='" + userImage + '\'' +
-                ", userNumber=" + userNumber +
-                ", userDate=" + userDate +
-                ", userState=" + userState +
-                ", userIdcard=" + userIdcard +
-                ", userLocation=" + userLocation +
-                '}';
-    }
+
 }
 

@@ -1,8 +1,12 @@
 package com.code.qrcodeback.dao;
 
 import com.code.qrcodeback.entity.Record;
+import com.code.qrcodeback.entity.User;
+import com.code.qrcodeback.link.PermitAndApply;
+import com.code.qrcodeback.link.RecordAndUser;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.data.domain.Pageable;
+
 import java.util.List;
 
 /**
@@ -24,8 +28,8 @@ public interface RecordDao {
     /**
      * 查询指定行数据
      *
-     * @param record 查询条件
-     * @param pageable         分页对象
+     * @param record   查询条件
+     * @param pageable 分页对象
      * @return 对象列表
      */
     List<Record> queryAllByLimit(Record record, @Param("pageable") Pageable pageable);
@@ -79,5 +83,12 @@ public interface RecordDao {
      */
     int deleteById(Integer recordId);
 
+    List<Record> searchById(Integer recordUserId);
+
+    List<RecordAndUser> searchAll();
+
+    List<RecordAndUser> searchAllById(Integer recordUserId);
+
+    List<RecordAndUser> searchAllByName(String userName);
 }
 

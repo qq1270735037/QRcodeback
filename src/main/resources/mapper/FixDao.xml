@@ -146,5 +146,26 @@
 
 
     </select>
+    <!--查询全部通过状态-->
+
+    <select id="queryByState" resultMap="FixAndUser">
+        select user_name,user_number,access.fix.user_id,fix_id,fix_name, fix_state, fix_message
+        from access.fix,access.user
+        where access.fix.user_id = access.user.user_id
+        and fix_state = #{fixState}
+
+
+
+    </select>
+<!--根据Id查询-->
+    <select id="queryAllFixAndUserById" resultMap="FixAndUser">
+        select user_name,user_number,access.fix.user_id,fix_id,fix_name, fix_state, fix_message
+        from access.fix,access.user
+        where access.fix.user_id = access.user.user_id
+          and fix.user_id = #{userId}
+
+
+
+    </select>
 </mapper>
 

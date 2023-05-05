@@ -14,7 +14,7 @@
         <result property="userNumber" column="user_number" jdbcType="INTEGER"/>
         <result property="userDate" column="user_date" jdbcType="TIMESTAMP"/>
         <result property="userState" column="user_state" jdbcType="INTEGER"/>
-        <result property="userIdcard" column="user_idcard" jdbcType="INTEGER"/>
+        <result property="userIdcard" column="user_idcard" jdbcType="VARCHAR"/>
         <result property="userLocation" column="user_location" jdbcType="INTEGER"/>
     </resultMap>
 
@@ -27,49 +27,12 @@
     </select>
 
     <!--查询指定行数据-->
-    <select id="queryAllByLimit" resultMap="BaseResultMap">
+    <select id="queryByPage" resultMap="BaseResultMap">
         select
           user_id, user_password, code_id, user_name, user_gender, user_type, user_image, user_number, user_date, user_state, user_idcard, user_location
         from user
-        <where>
-            <if test="userId != null">
-                and user_id = #{userId}
-            </if>
-            <if test="userPassword != null and userPassword != ''">
-                and user_password = #{userPassword}
-            </if>
-            <if test="codeId != null">
-                and code_id = #{codeId}
-            </if>
-            <if test="userName != null and userName != ''">
-                and user_name = #{userName}
-            </if>
-            <if test="userGender != null and userGender != ''">
-                and user_gender = #{userGender}
-            </if>
-            <if test="userType != null">
-                and user_type = #{userType}
-            </if>
-            <if test="userImage != null and userImage != ''">
-                and user_image = #{userImage}
-            </if>
-            <if test="userNumber != null">
-                and user_number = #{userNumber}
-            </if>
-            <if test="userDate != null">
-                and user_date = #{userDate}
-            </if>
-            <if test="userState != null">
-                and user_state = #{userState}
-            </if>
-            <if test="userIdcard != null">
-                and user_idcard = #{userIdcard}
-            </if>
-            <if test="userLocation != null">
-                and user_location = #{userLocation}
-            </if>
-        </where>
-        limit #{pageable.offset}, #{pageable.pageSize}
+
+        limit #{Page}, #{Limit}
     </select>
 
     <!--通过实体作为筛选条件查询-->
@@ -82,44 +45,7 @@
     <select id="count" resultType="java.lang.Long">
         select count(1)
         from user
-        <where>
-            <if test="userId != null">
-                and user_id = #{userId}
-            </if>
-            <if test="userPassword != null and userPassword != ''">
-                and user_password = #{userPassword}
-            </if>
-            <if test="codeId != null">
-                and code_id = #{codeId}
-            </if>
-            <if test="userName != null and userName != ''">
-                and user_name = #{userName}
-            </if>
-            <if test="userGender != null and userGender != ''">
-                and user_gender = #{userGender}
-            </if>
-            <if test="userType != null">
-                and user_type = #{userType}
-            </if>
-            <if test="userImage != null and userImage != ''">
-                and user_image = #{userImage}
-            </if>
-            <if test="userNumber != null">
-                and user_number = #{userNumber}
-            </if>
-            <if test="userDate != null">
-                and user_date = #{userDate}
-            </if>
-            <if test="userState != null">
-                and user_state = #{userState}
-            </if>
-            <if test="userIdcard != null">
-                and user_idcard = #{userIdcard}
-            </if>
-            <if test="userLocation != null">
-                and user_location = #{userLocation}
-            </if>
-        </where>
+
     </select>
 
     <!--新增所有列-->
@@ -201,6 +127,27 @@
     <delete id="deleteById">
         delete from user where user_id = #{userId}
     </delete>
+    <select id="searchById" resultMap="BaseResultMap">
+        select
+            user_id, code_id, user_name, user_gender, user_type, user_image, user_number, user_date, user_state, user_idcard, user_location
+        from access.user
+        where user_id=#{userId}
+<!--        where user_id like concat('%',#{userId},'%')-->
+    </select>
+    <select id="searchByName" resultMap="BaseResultMap">
+        select
+        user_id, code_id, user_name, user_gender, user_type, user_image, user_number, user_date, user_state, user_idcard, user_location
+        from access.user
+        where user_name like concat('%',#{userName},'%')
+        <!--        where user_id like concat('%',#{userId},'%')-->
+    </select>
 
+    <select id="searchByIdCard" resultMap="BaseResultMap">
+        select
+        user_id, code_id, user_name, user_gender, user_type, user_image, user_number, user_date, user_state, user_idcard, user_location
+        from access.user
+        where user_idcard like concat('%',#{userIdcard},'%')
+        <!--        where user_id like concat('%',#{userId},'%')-->
+    </select>
 </mapper>
 

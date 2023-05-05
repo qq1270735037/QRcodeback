@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.util.Date;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -19,4 +20,5 @@ public class FixAndUser {
     private String fixName;
     private Integer fixState;
     private String fixMessage;
+    private List<String> fixImage;
 }

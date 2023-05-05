@@ -4,11 +4,9 @@ import com.code.qrcodeback.entity.User;
 import com.code.qrcodeback.dao.UserDao;
 import com.code.qrcodeback.service.UserService;
 import org.springframework.stereotype.Service;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.PageRequest;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * (User)表服务实现类
@@ -32,17 +30,11 @@ public class UserServiceImpl implements UserService {
         return this.userDao.queryById(userId);
     }
 
-    /**
-     * 分页查询
-     *
-     * @param user 筛选条件
-     * @param pageRequest      分页对象
-     * @return 查询结果
-     */
+
     @Override
-    public Page<User> queryByPage(User user, PageRequest pageRequest) {
-        long total = this.userDao.count(user);
-        return new PageImpl<>(this.userDao.queryAllByLimit(user, pageRequest), pageRequest, total);
+    public List<User> queryByPage(Long Page,Long Limit) {
+
+        return this.userDao.queryByPage( Page,Limit);
     }
 
     /**
@@ -79,4 +71,29 @@ public class UserServiceImpl implements UserService {
     public boolean deleteById(Integer userId) {
         return this.userDao.deleteById(userId) > 0;
     }
+
+    @Override
+    public List<User> queryAll(){
+        return this.userDao.queryAll();
+    }
+
+    @Override
+    public long count(){return this.userDao.count();}
+
+    @Override
+    public List<User> searchById(Integer userId){
+        return this.userDao.searchById(userId);
+    }
+
+    @Override
+    public List<User> searchByName(String userName){
+        return this.userDao.searchByName(userName);
+    }
+
+    @Override
+    public List<User> searchByIdCard(String userIdcard){
+        return this.userDao.searchByIdCard(userIdcard);
+    }
+
+
 }
